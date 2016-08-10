@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android" >
+    
+    <item android:drawable="@drawable/lingyixuanxiang_luyin_null"
+        android:state_checked="false"/>
+     <!-- 未选中为false 所选的图片为灰色       此处为空-->
+    
+     <!-- 选中为true 所选的图片为点亮的图片颜色       此处为黑色-->
+    <item android:drawable="@drawable/lingyixuanxiang_luyin" 
+        android:state_checked="true"/>
+
+</selector>

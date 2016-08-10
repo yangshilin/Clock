@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/beijing"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:alpha="0.6"
+        android:background="@color/balck" >
+
+        <ImageButton
+            android:id="@+id/return_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:src="@drawable/return_not" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/sheding"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/shezhi_id"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:alpha="0.6"
+        android:background="@color/balck" >
+
+        <TextView
+            android:id="@+id/textview_moshi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="40dp"
+            android:layout_weight="1"
+            android:padding="7dp"
+            android:text="@string/zhendong"
+            android:textColor="@color/white" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="56dp"
+            android:layout_weight="1"
+            android:background="@null"
+            android:drawableRight="@drawable/dexter_two"
+            android:text="@string/yu"
+            android:textColor="@color/white"
+            android:textSize="15sp" />
+    </RelativeLayout>
+
+    <RadioGroup
+        android:id="@+id/radiogroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:alpha="0.6"
+        android:background="@color/balck" >
+
+        <RadioButton
+            android:id="@+id/radiobtn_Firefly"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Firefly"
+            android:textColor="@drawable/change" />
+
+        <RadioButton
+            android:id="@+id/radiobtn_Baby"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Baby"
+            android:textColor="@drawable/change" />
+
+        <RadioButton
+            android:id="@+id/radiobtn_Bob"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Bob"
+            android:textColor="@drawable/change" />
+
+        <RadioButton
+            android:id="@+id/radiobtn_BoDeSa"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/BoDeSa"
+            android:textColor="@drawable/change" />
+
+        <RadioButton
+            android:id="@+id/radiobtn_Lemon"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Lemon"
+            android:textColor="@drawable/change" />
+
+        <RadioButton
+            android:id="@+id/radiobtn_Mushrooms"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Mushrooms"
+            android:textColor="@drawable/change" />
+
+        <RadioButton
+            android:id="@+id/radiobtn_Lantern"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/Lantern"
+            android:textColor="@drawable/change" />
+    </RadioGroup>
+
+</LinearLayout>

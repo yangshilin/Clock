@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/task_shiping_buju"
+		android:layout_width="fill_parent"
+        android:layout_height="170dp"
+       >
+		 <ImageView 
+		    android:id="@+id/task_shuju_beijing"
+		    android:layout_width="match_parent"
+		    android:layout_height="fill_parent"
+		    android:background="@null"
+		    android:alpha="0.8"/>
+		   <!--  android:background="@drawable/pingjingdeyuzhou" --> 
+        <!--  android:alpha="0.8" 透明度-->
+        
+        <ImageButton
+            android:id="@+id/task_shiping_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:background="@null"
+            android:padding="10dp"
+            android:src="@drawable/play_not" />
+
+        <TextView
+            android:id="@+id/task_shiping_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="50dp"
+            android:text="平静的宇宙"
+            android:textColor="@color/white"
+            android:textSize="20sp" />
+
+        <TextView
+            android:id="@+id/task_textview_dengji"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/task_shiping_title"
+            android:layout_marginLeft="110dp"
+            android:layout_marginTop="5dp"
+            android:text="难度:"
+            android:textColor="@color/white" />
+
+        <!-- android:layout_below="@id/task_shiping_title" 调用id相对某控件下面 -->
+			
+			<ImageView 
+			android:id="@+id/task_xingji"
+			android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/task_shiping_title"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/task_textview_dengji"
+            android:src="@drawable/xingxing_dengji_1"
+            />
+     <!--    <RatingBar
+            android:id="@+id/task_xingji"
+            style="?android:attr/ratingBarStyleSmall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/task_shiping_title"
+            android:layout_marginTop="5dp"
+            android:layout_toRightOf="@id/task_textview_dengji"
+            android:numStars="5"
+            android:rating="3"
+            android:stepSize="0.3" /> -->
+
+        <!-- style="?android:attr/ratingBarStyleSmall" 星星大小【小】 -->
+        <!-- android:numStars="5" 星星最大评级个数 -->
+        <!-- android:rating="1" 设置等级 -->
+        <!-- android:stepSize="0.3" 设置步长 -->
+
+        <ImageButton
+            android:id="@+id/task_xianche_shouchang"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/task_xingji"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:background="@null"
+            android:src="@drawable/select" />
+
+    </RelativeLayout>
+
+</LinearLayout>
