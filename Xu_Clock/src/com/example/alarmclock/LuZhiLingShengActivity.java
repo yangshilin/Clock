@@ -23,7 +23,6 @@ public class LuZhiLingShengActivity extends Activity{
 		
 		returnbtn=(ImageButton)findViewById(R.id.return_imagebtn);
 		recordingbtn=(ImageView)findViewById(R.id.recording_imagebtn);
-		
 		returnbtn.setOnClickListener(onClickListener);
 		recordingbtn.setOnClickListener(onClickListener);
 	}
@@ -39,8 +38,8 @@ public class LuZhiLingShengActivity extends Activity{
 				startActivity(intent);
 				break;
 			case R.id.recording_imagebtn:
-				Toast.makeText(getApplicationContext(), "：", Toast.LENGTH_LONG).show();// ��ʾʱ��϶�
-				//Toast.makeText(this, "�����¼�����������", Toast.LENGTH_SHORT).show();
+				Toast.makeText(getApplicationContext(), "你可以录制你的声音了", Toast.LENGTH_LONG).show();// ��ʾʱ��϶�
+				//Toast.makeText(this, "你可以录制你的声音了", Toast.LENGTH_SHORT).show();
 				break;
 			default:
 				break;
