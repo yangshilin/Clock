@@ -25,8 +25,7 @@ public class Message_Fragment extends Fragment {
 		// TODO Auto-generated method stub
 		View v = new View(getActivity());
 		v = inflater.inflate(R.layout.activity_message, container, false);
-		View shouye=inflater.inflate(R.layout.activity_shouye, null);
-		mMyHorizontalScrollView=(MyHorizontalScrollView) shouye.findViewById(R.id.mMyHorizontalScrollView);
+		mMyHorizontalScrollView=(MyHorizontalScrollView) v.findViewById(R.id.mMyHorizontalScrollView);
 		personage = (ImageView) v.findViewById(R.id.personage);
 		personage.setOnClickListener(new OnClickListener() {
 			@Override
