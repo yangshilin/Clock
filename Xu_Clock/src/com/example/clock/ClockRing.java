@@ -31,16 +31,19 @@ public class ClockRing extends View {
 	String doing = "稍息立正起床！";
 	String alarm_time = "07:30";
 	boolean open;
-	Bitmap bitmap_off=new BitmapFactory().decodeResource(getResources(), R.drawable.on_off_not);
-	Bitmap bitmap_on=new BitmapFactory().decodeResource(getResources(), R.drawable.on_off);
+
 	public ClockListener getClockListener() {
 		return clockListener;
+
+
 	}
 
 	public void setClockListener(ClockListener clockListener) {
 		this.clockListener = clockListener;
 	}
+
 	ClockListener clockListener;
+
 	public ClockRing(Context context) {
 		super(context);
 		// TODO Auto-generated constructor stub
@@ -50,38 +53,43 @@ public class ClockRing extends View {
 		super(context, attrs);
 		// TODO Auto-generated constructor stub
 	}
-@Override
-public boolean onTouchEvent(MotionEvent event) {
-	// TODO Auto-generated method stub
-	int action=event.getAction();
-	switch (event.getAction()) {
-	case MotionEvent.ACTION_DOWN:
-		Log.i("event.getX()", ""+event.getX());
-		Log.i("event.getY()", ""+event.getY());
-		if(event.getX()>525&&event.getX()<625&&event.getY()>550&&event.getY()<610)
-		{
-			if(open){
-				open=false;
-			}else{
-				open=true;
-			}
-			invalidate();
-		}
-		else if(event.getX()>100&&event.getX()<440&&event.getY()>525&&event.getY()<625){
-			/*Intent intent=new Intent(getContext(),BianJiNaoZhongActivity.class);
-			getContext().startActivity(intent);*/
-			if(clockListener!=null){
-				clockListener.click();
-			}
-			
-		}
-		break;
 
-	default:
-		break;
+	@Override
+	public boolean onTouchEvent(MotionEvent event) {
+		// TODO Auto-generated method stub
+		int action = event.getAction();
+		switch (event.getAction()) {
+		case MotionEvent.ACTION_DOWN:
+			Log.i("event.getX()", "" + event.getX());
+			Log.i("event.getY()", "" + event.getY());
+			if (event.getX() > 525 && event.getX() < 625 && event.getY() > 550
+					&& event.getY() < 610) {
+				if (open) {
+					open = false;
+				} else {
+					open = true;
+				}
+				invalidate();
+			} else if (event.getX() > 100 && event.getX() < 440
+					&& event.getY() > 525 && event.getY() < 625) {
+				/*
+				 * Intent intent=new
+				 * Intent(getContext(),BianJiNaoZhongActivity.class);
+				 * getContext().startActivity(intent);
+				 */
+				if (clockListener != null) {
+					clockListener.click();
+				}
+
+			}
+			break;
+
+		default:
+			break;
+		}
+		return true;
 	}
-	return true;
-}
+
 	@Override
 	protected void onDraw(Canvas canvas) {
 		// TODO Auto-generated method stub
@@ -128,41 +136,42 @@ public boolean onTouchEvent(MotionEvent event) {
 		Bitmap bitmap_star_not = new BitmapFactory().decodeResource(
 				getResources(), R.drawable.star_not);
 		for (int i = 0; i < 5; i++) {
-			
-			if (i+1 <= difficult) {
+			if (i + 1 <= difficult) {
 				canvas.drawBitmap(bitmap_star, 300 + 25 * i, 540, paint);
-				
 			} else {
 				canvas.drawBitmap(bitmap_star_not, 300 + 25 * i, 540, paint);
 			}
 		}
-		if(!open){
-			canvas.drawBitmap(bitmap_off, 525,550, paint);
-		}
-		else if(open){
+		Bitmap bitmap_off = new BitmapFactory().decodeResource(getResources(),
+				R.drawable.on_off_not);
+		Bitmap bitmap_on = new BitmapFactory().decodeResource(getResources(),
+				R.drawable.on_off);
+		if (!open) {
+			canvas.drawBitmap(bitmap_off, 525, 550, paint);
+		} else if (open) {
 			canvas.drawBitmap(bitmap_on, 525, 550, paint);
 		}
 		paint.setStyle(Paint.Style.STROKE);
 		paint.setStrokeWidth(3);
 		RectF rectf = new RectF(75, 525, 675, 625);
 		canvas.drawRoundRect(rectf, 50, 50, paint);
-		if(bitmap!=null){
+		if (bitmap != null) {
 			bitmap.recycle();
 		}
-		if(bitmap_star!=null){
+		if (bitmap_star != null) {
 			bitmap_star.recycle();
 		}
-		if(bitmap_star_not!=null){
+		if (bitmap_star_not != null) {
 			bitmap_star_not.recycle();
 		}
-		if(bitmap_off!=null){
+		if (bitmap_off != null) {
 			bitmap_off.recycle();
 		}
-		if(bitmap_on!=null){
+		if (bitmap_on != null) {
 			bitmap_on.recycle();
 		}
 	}
-	
+
 	public int getDifficult() {
 		return difficult;
 	}
@@ -250,7 +259,8 @@ public boolean onTouchEvent(MotionEvent event) {
 	public void setWeek(String week) {
 		this.week = week;
 	}
-	public interface ClockListener{
+
+	public interface ClockListener {
 		public void click();
 	}
 }
