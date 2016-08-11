@@ -1,4 +1,4 @@
-package com.xuguoli.acyivity;
+package com.xuguoli.activity;
 
 import java.util.ArrayList;
 import java.util.List;
