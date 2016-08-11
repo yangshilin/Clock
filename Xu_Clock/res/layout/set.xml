@@ -34,27 +34,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
-        <ImageView
-            android:id="@+id/imagemine_two"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentLeft="true"
-            android:layout_alignTop="@+id/imageButton1"
-            android:layout_marginLeft="15dp"
-            android:src="@drawable/mine_two" />
-
-        <TextView
-            android:id="@+id/setname"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/imageButton1"
-            android:layout_marginLeft="10dp"
-            android:layout_toRightOf="@+id/imagemine_two"
-            android:text="夏是夏天的夏_"
-            android:textColor="#000000"
-            android:textSize="17sp" />
+        android:layout_height="60dp" >
 
         <ImageButton
             android:id="@+id/imageButton1"
@@ -64,6 +44,27 @@
             android:layout_centerVertical="true"
             android:background="@null"
             android:src="@drawable/dexter" />
+
+        <ImageView
+            android:id="@+id/imagemine_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/mine" />
+
+        <TextView
+            android:id="@+id/setname"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="14dp"
+            android:layout_toRightOf="@+id/imagemine_two"
+            android:text="夏是夏天的夏_"
+            android:textColor="#000000"
+            android:textSize="14sp" />
+
     </RelativeLayout>
 
     <View
@@ -73,7 +74,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="50dp" >
 
         <TextView
             android:layout_width="wrap_content"
@@ -102,7 +103,7 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="50dp" >
 
         <TextView
             android:layout_width="wrap_content"
@@ -126,12 +127,14 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:background="#efefef" />
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="50dp" >
 
         <TextView
             android:id="@+id/tvwu"
@@ -155,13 +158,16 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
             android:background="@null"
             android:src="@drawable/on_off_not" />
     </RelativeLayout>
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:background="#efefef" />
 
     <RelativeLayout
@@ -183,7 +189,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
-            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
             android:background="@null"
             android:src="@drawable/on_off_not" />
 
@@ -191,7 +197,7 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="20dp"
+        android:layout_height="15dp"
         android:background="#F7F7F7" />
 
     <RelativeLayout
@@ -220,7 +226,9 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:background="#efefef" />
 
     <TextView
@@ -235,7 +243,9 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="2dp"
+        android:layout_height="1dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
         android:background="#efefef" />
 
     <TextView
