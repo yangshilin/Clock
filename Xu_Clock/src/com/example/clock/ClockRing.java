@@ -34,7 +34,10 @@ public class ClockRing extends View {
 
 	public ClockListener getClockListener() {
 		return clockListener;
+<<<<<<< HEAD
 		//
+=======
+>>>>>>> 626ba40a615de310dcf8019a46f8a1f278a69c13
 	}
 
 	public void setClockListener(ClockListener clockListener) {

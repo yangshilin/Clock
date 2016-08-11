@@ -1,9 +1,8 @@
 package com.example.alarmclock;
 
-
-
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -18,27 +17,23 @@ import android.widget.TextView;
 import com.example.clock.R;
 
 public class SheZingLingShengActivity extends Activity {
-	TextView  textview;//ģʽ�ı�
-	RadioButton fireflybtn;
+	TextView textview;// 模式文本
+	RadioButton fireflybtn, babybtn, bobbtn, bodesabtn, lanternbtn, lemonbtn,
+			mushroomsbtn;
 	RadioGroup radiogroup;
-	RadioButton babybtn;
-	RadioButton bobbtn;
-	RadioButton bodesabtn;
-	RadioButton lanternbtn;
-	RadioButton lemonbtn;
-	RadioButton mushroomsbtn;
-	ImageButton returnbtn;//���ر༭���Ӱ�ť
-	RelativeLayout setbtn;// ѡ�����ѷ�ʽ
+	ImageButton returnbtn;// 返回
+	RelativeLayout setbtn;// 设置模式
 	TextView textview2;
-	String[] str={"震动","铃声","震动加铃声"};
+	String[] str = { "震动", "铃声", "震动加铃声" };
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.shedinglingsheng);
-		textview=(TextView)findViewById(R.id.textview_moshi);
+		textview = (TextView) findViewById(R.id.textview_moshi);
 		setbtn = (RelativeLayout) findViewById(R.id.shezhi_id);
-		radiogroup=(RadioGroup) findViewById(R.id.radiogroup);
+		radiogroup = (RadioGroup) findViewById(R.id.radiogroup);
 		returnbtn = (ImageButton) findViewById(R.id.return_btn);
 		fireflybtn = (RadioButton) findViewById(R.id.radiobtn_Firefly);
 		babybtn = (RadioButton) findViewById(R.id.radiobtn_Baby);
@@ -55,35 +50,35 @@ public class SheZingLingShengActivity extends Activity {
 		mushroomsbtn.setOnClickListener(onClickListener);
 		returnbtn.setOnClickListener(onClickListener);
 		setbtn.setOnClickListener(onClickListener);
-		radiogroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-			
-			@Override
-			public void onCheckedChanged(RadioGroup group, int checkedId) {
-				// TODO Auto-generated method stub
-				switch (checkedId) {
-				case R.id.radiobtn_Firefly:
-					radiogroup.check(fireflybtn.getId());
-					break;
-				case R.id.radiobtn_Baby:
-					radiogroup.check(babybtn.getId());
-					break;
-				case R.id.radiobtn_BoDeSa:
-					radiogroup.check(bodesabtn.getId());
-					break;
-				case R.id.radiobtn_Lantern:
-					radiogroup.check(lanternbtn.getId());
-					break;
-				case R.id.radiobtn_Lemon:
-					radiogroup.check(lemonbtn.getId());
-					break;
-				case R.id.radiobtn_Mushrooms:
-					radiogroup.check(mushroomsbtn.getId());
-					break;
-				default:
-					break;
-				}
-			}
-		});
+		radiogroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {// radioGroup的监听事件
+
+					@Override
+					public void onCheckedChanged(RadioGroup group, int checkedId) {
+						// TODO Auto-generated method stub
+						switch (checkedId) {
+						case R.id.radiobtn_Firefly:
+							radiogroup.check(fireflybtn.getId());
+							break;
+						case R.id.radiobtn_Baby:
+							radiogroup.check(babybtn.getId());
+							break;
+						case R.id.radiobtn_BoDeSa:
+							radiogroup.check(bodesabtn.getId());
+							break;
+						case R.id.radiobtn_Lantern:
+							radiogroup.check(lanternbtn.getId());
+							break;
+						case R.id.radiobtn_Lemon:
+							radiogroup.check(lemonbtn.getId());
+							break;
+						case R.id.radiobtn_Mushrooms:
+							radiogroup.check(mushroomsbtn.getId());
+							break;
+						default:
+							break;
+						}
+					}
+				});
 	}
 
 	OnClickListener onClickListener = new OnClickListener() {
@@ -92,32 +87,42 @@ public class SheZingLingShengActivity extends Activity {
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
 			switch (v.getId()) {
-			case R.id.return_btn:
+			case R.id.return_btn:// 返回上一个界面
 
 				Intent intent = new Intent(SheZingLingShengActivity.this,
 						BianJiNaoZhongActivity.class);
-				Bundle bundle=new Bundle();
+				Bundle bundle = new Bundle();
 				intent.putExtra("String", "Firefly");
-				
+
 				startActivity(intent);
 				break;
-			case R.id.shezhi_id:
-				dialog();
+			case R.id.shezhi_id:// 选择闹钟提醒模式
+				new AlertDialog.Builder(SheZingLingShengActivity.this)
+						.setTitle("请选择你想要的模式")
+						.setItems(str, new DialogInterface.OnClickListener() {
+							@Override
+							public void onClick(DialogInterface dialog,
+									int which) {
+								// TODO Auto-generated method stub
+								switch (which) {
+								case 0:
+									textview.setText(str[0]);
+									break;
+								case 1:
+									textview.setText(str[1]);
+									break;
+								case 2:
+									textview.setText(str[2]);
+									break;
+								}
+							}
+						}).show();
 				break;
-			
+
 			default:
 				break;
 			}
 		}
 	};
-	public void dialog(){
-		AlertDialog.Builder builder=new AlertDialog.Builder(SheZingLingShengActivity.this);
-		builder.setTitle("选择模式：");
-		builder.setItems(str, null);
-		//builder.setOnClickListener(onClickListener);
-		builder.setNegativeButton("确认", null);
-		builder.show();
-		//textview.setText(text);
-		
-	}
+
 }

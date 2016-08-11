@@ -32,10 +32,10 @@ public class DaoHangActivity extends Activity{
 			// TODO Auto-generated method stub
 			switch (v.getId()){
 			case R.id.add_imagebutton:
-				Log.i("personalBtn","��Ҫ���ʲô��");
+				
 				break;
 			case R.id.personal_imageview:
-				Log.i("personalBtn","��Ҫ�����������");
+				
 				break;
 			default:
 				break;
