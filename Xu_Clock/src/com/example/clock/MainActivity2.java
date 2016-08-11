@@ -4,8 +4,8 @@ import com.example.alarmclock.LuZhiLingShengActivity;
 import com.example.alarmclok.view.Find_Fragment;
 import com.example.clock.ClockRing.ClockListener;
 import com.example.clock.menu.view.MyHorizontalScrollView;
-import com.xuguoli.acyivity.Circle;
-import com.xuguoli.acyivity.Set;
+import com.xuguoli.activity.Circle;
+import com.xuguoli.activity.Set;
 
 import fragment.Clock_Fragment;
 import fragment.Message_Fragment;
