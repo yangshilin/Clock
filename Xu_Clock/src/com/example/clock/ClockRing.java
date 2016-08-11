@@ -147,9 +147,23 @@ public boolean onTouchEvent(MotionEvent event) {
 		paint.setStrokeWidth(3);
 		RectF rectf = new RectF(75, 525, 675, 625);
 		canvas.drawRoundRect(rectf, 50, 50, paint);
-		
+		if(bitmap!=null){
+			bitmap.recycle();
+		}
+		if(bitmap_star!=null){
+			bitmap_star.recycle();
+		}
+		if(bitmap_star_not!=null){
+			bitmap_star_not.recycle();
+		}
+		if(bitmap_off!=null){
+			bitmap_off.recycle();
+		}
+		if(bitmap_on!=null){
+			bitmap_on.recycle();
+		}
 	}
-
+	
 	public int getDifficult() {
 		return difficult;
 	}
