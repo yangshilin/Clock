@@ -34,8 +34,7 @@ public class ClockRing extends View {
 	Bitmap bitmap_off=new BitmapFactory().decodeResource(getResources(), R.drawable.on_off_not);
 	Bitmap bitmap_on=new BitmapFactory().decodeResource(getResources(), R.drawable.on_off);
 	public ClockListener getClockListener() {
-		return clockListener;   
-		 //
+		return clockListener;
 	}
 
 	public void setClockListener(ClockListener clockListener) {
