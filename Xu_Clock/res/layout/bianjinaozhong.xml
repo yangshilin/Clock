@@ -7,7 +7,9 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:alpha="0.6"
+        android:background="@drawable/beijing_jianbian" >
 
         <ImageButton
             android:id="@+id/return_imagebtn"
@@ -49,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="15dp"
-            android:background="@drawable/pinjingdeyuzhou"
+            android:background="@drawable/pingjingdeyuzhou"
             android:gravity="center"
             android:orientation="vertical" >
 
@@ -71,9 +73,9 @@
                     android:text="@string/nandu"
                     android:textColor="@color/white"
                     android:textSize="11sp" />
-
+			
                 <RatingBar
-                    style="?android:attr/ratingBarStyleSmall"
+                    style="@style/RatingBar"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:numStars="5"
