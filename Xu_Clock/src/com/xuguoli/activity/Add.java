@@ -1,4 +1,4 @@
-package com.xuguoli.acyivity;
+package com.xuguoli.activity;
 
 import com.example.clock.R;
 
