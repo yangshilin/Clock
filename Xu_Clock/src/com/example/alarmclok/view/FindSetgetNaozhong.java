@@ -1,8 +1,8 @@
 package com.example.alarmclok.view;
 
-public class Find_setget_1 {
+public class FindSetgetNaozhong {
 	/**
-	 *¶¨ÒåÀàÐÍ
+	 *ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	 */
 	String title;
 	String time;
