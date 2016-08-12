@@ -11,11 +11,9 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-<<<<<<< HEAD
-=======
+
 import com.example.alarmclok.view.TaskSetget;
 
->>>>>>> 76a9568c72b1ce61c7c0ae0b676edcec1992f61b
 public class MyAdapterTask extends BaseAdapter{
 	Context context;//������
 	LayoutInflater inflater;//���������

@@ -162,11 +162,9 @@ public class MainActivity2 extends FragmentActivity {
 		Clock_Fragment clock_Fragment = new Clock_Fragment();
 		Message_Fragment message_Fragment = new Message_Fragment();
 		Circle circle=new Circle();
-<<<<<<< HEAD
-		FindFragment find_Fragment=new FindFragment();
-=======
+
 		FindFragment FindFragment=new FindFragment();
->>>>>>> 76a9568c72b1ce61c7c0ae0b676edcec1992f61b
+
 		switch (R_id) {
 		case R.id.clock:
 			ft.replace(R.id.linearlayout, clock_Fragment);

@@ -40,12 +40,10 @@ public class TaskActivity extends Activity{
 		listview = (ListView)findViewById(R.id.task_listview);
 		getData();//���Data���ݡ�������
 									//��������ֻ����Activity���ͣ�������Fragment. ����������Ҫ��ӽ�listview�Ĳ���
-<<<<<<< HEAD
+
 		
 		adapter =new MyAdapterTask(TaskActivity.this,R.layout.activity_task_2,id,lists);
-=======
-		adapter =new MyAdapterTask(TaskActivity.this,R.layout.activity_task_2, id, lists);
->>>>>>> 76a9568c72b1ce61c7c0ae0b676edcec1992f61b
+
 		listview.setAdapter(adapter);//�б���ͼ����������
 		/**
 		 * ��תҳ��
