@@ -2,9 +2,6 @@ package com.example.adapter;
 
 import java.util.List;
 
-import com.example.alarmclok.view.Find_setget_2;
-import com.example.clock.R;
-
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,16 +9,19 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
-public class MyAdapter_Find_2 extends BaseAdapter{
+import com.example.alarmclok.view.FindSetgetLuyin;
+import com.example.clock.R;
+
+public class MyAdapterFindLuyin extends BaseAdapter{
 	LayoutInflater inflater;//���������
 	Context context;//������
-	List<Find_setget_2> lists;
+	List<FindSetgetLuyin> lists;
 	int id;
 	
-	public MyAdapter_Find_2(){//�Զ�����޲ι�����
+	public MyAdapterFindLuyin(){//�Զ�����޲ι�����
 		
 	}
-	public MyAdapter_Find_2(Context context, int id, List<Find_setget_2> lists){
+	public MyAdapterFindLuyin(Context context, int id, List<FindSetgetLuyin> lists){
 		this.lists = lists;
 		this.context = context;
 		this.id = id;
@@ -60,7 +60,7 @@ public class MyAdapter_Find_2 extends BaseAdapter{
 		TextView praiseQuantity = (TextView) convertView.findViewById(R.id.find_dianzan_shuzhi);
 		TextView commentQuantity = (TextView) convertView.findViewById(R.id.find_dianjicishu_shuzhi);
 		
-		Find_setget_2 fs2 =lists.get(position);
+		FindSetgetLuyin fs2 =lists.get(position);
 		
 	/*	imageView.setBackgroundDrawable(context.getResources().getDrawable(
 				products.getImgedt())); ����д��*/

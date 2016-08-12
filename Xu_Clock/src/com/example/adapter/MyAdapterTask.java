@@ -11,20 +11,20 @@ import android.widget.ImageView;
 import android.widget.TextView;
 import com.example.alarmclok.view.Task_setget;
 
-public class MyAdapter_Task extends BaseAdapter{
-	Context context;//ÉÏÏÂÎÄ
-	LayoutInflater inflater;//²¼¾ÖÌî³äÆ÷
+public class MyAdapterTask extends BaseAdapter{
+	Context context;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
+	LayoutInflater inflater;//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 	int item;
-	int[] id;//idÊý×é
-	List<Task_setget> lists;//ÁÐ±í¼¯ºÏTask_setget·â×°Àà
+	int[] id;//idï¿½ï¿½ï¿½ï¿½
+	List<Task_setget> lists;//ï¿½Ð±ï¿½ï¿½ï¿½Task_setgetï¿½ï¿½×°ï¿½ï¿½
 	
 	
-	public MyAdapter_Task() {//ÎÞ²Î¹¹ÔìÆ÷
+	public MyAdapterTask() {//ï¿½Þ²Î¹ï¿½ï¿½ï¿½ï¿½ï¿½
 		// TODO Auto-generated constructor stub
 		super();
 	}
 	
-	public MyAdapter_Task(Context context, int item, int[] id, List<Task_setget> lists){
+	public MyAdapterTask(Context context, int item, int[] id, List<Task_setget> lists){
 		super();
 		this.context = context;
 		this.id = id;
@@ -36,7 +36,7 @@ public class MyAdapter_Task extends BaseAdapter{
 	@Override
 	public int getCount() {
 		// TODO Auto-generated method stub
-		return lists.size();//·µ»ØÁÐ±í³¤¶È
+		return lists.size();//ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½ï¿½ï¿½
 	}
 	@Override
 	public Object getItem(int position) {
@@ -54,17 +54,17 @@ public class MyAdapter_Task extends BaseAdapter{
 		if(convertView ==null){
 			convertView = inflater.inflate(item, null);
 		}
-		ImageView beijing = (ImageView)convertView.findViewById(id[0]);//´Ë´¦µÄÏÂ±êÎª0¿ªÊ¼µÝÔö£¬²»ÄÜÐ´´í
+		ImageView beijing = (ImageView)convertView.findViewById(id[0]);//ï¿½Ë´ï¿½ï¿½ï¿½ï¿½Â±ï¿½Îª0ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ð´ï¿½ï¿½
 		ImageButton bofang = (ImageButton)convertView.findViewById(id[1]);
 		TextView title = (TextView)convertView.findViewById(id[2]);
 		TextView nandu = (TextView)convertView.findViewById(id[3]);
 		ImageView xingji = (ImageView)convertView.findViewById(id[4]);
 		ImageButton xuanzhe = (ImageButton)convertView.findViewById(id[5]);
 		
-		Task_setget ts =lists.get(position);//½«ÀàÐÍ´«¸ølistsÁÐ±íÊý×éÖÐ ÉèÖÃposition
+		Task_setget ts =lists.get(position);//ï¿½ï¿½ï¿½ï¿½ï¿½Í´ï¿½ï¿½ï¿½listsï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½position
 		
 		beijing.setImageResource(ts.getBeijing());
-		bofang.setImageResource(ts.getBofang());//ÁÐ±íÖÐÉùÃ÷µÄ¶ÔÏóÉèÖÃÍ¼Æ¬×ÊÔ´£¬¡¾ÁÐ±íµÄ¶ÔÏó¶¨ÒåÉèÖÃÀàÐÍ¡¿
+		bofang.setImageResource(ts.getBofang());//ï¿½Ð±ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¼Æ¬ï¿½ï¿½Ô´ï¿½ï¿½ï¿½ï¿½ï¿½Ð±ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Í¡ï¿½
 		title.setText(ts.getTitle());
 		nandu.setText(ts.getNandu());
 		xingji.setImageResource(ts.getXingji());

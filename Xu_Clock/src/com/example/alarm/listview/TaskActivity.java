@@ -12,7 +12,7 @@ import android.widget.ImageButton;
 import android.widget.ListView;
 
 import com.example.adapter.MyAdapter_Task;
-import com.example.alarmclok.view.Task_setget;
+import com.example.alarmclok.view.TaskSetget;
 import com.example.clock.MainActivity2;
 import com.example.clock.R;
 
@@ -24,7 +24,7 @@ public class TaskActivity extends Activity{
 	int [] id ={R.id.task_shuju_beijing,R.id.task_shiping_button,R.id.task_shiping_title,R.id.task_textview_dengji,
 			R.id.task_xingji,R.id.task_xianche_shouchang};//id����
 	MyAdapter_Task adapter;//BaseAdapter ���Զ����ࡿ
-	List<Task_setget> lists;//�б��϶���
+	List<TaskSetget> lists;//�б��϶���
 	/**
 	 * ��תҳ��
 	 */
@@ -74,8 +74,8 @@ public class TaskActivity extends Activity{
 	 */
 	public void getData() {
 		// TODO Auto-generated method stub
-		lists = new ArrayList<Task_setget>();
-		Task_setget ts = new Task_setget();
+		lists = new ArrayList<TaskSetget>();
+		TaskSetget ts = new TaskSetget();
 		
 		ts.setBeijing(R.drawable.pingjingdeyuzhou);
 		ts.setBofang(R.drawable.play_not);
@@ -86,7 +86,7 @@ public class TaskActivity extends Activity{
 		lists.add(ts);//�б�������ݶ���
 		
 		
-		 ts = new Task_setget();
+		 ts = new TaskSetget();
 		ts.setBeijing(R.drawable.xingjiqibin);
 		ts.setBofang(R.drawable.play_not);
 		ts.setTitle("�Ǽ����");
@@ -95,7 +95,7 @@ public class TaskActivity extends Activity{
 		
 		lists.add(ts);//�б�������ݶ���
 		
-			ts = new Task_setget();
+			ts = new TaskSetget();
 		ts.setBeijing(R.drawable.yuhangyuandeweixiao);
 		ts.setBofang(R.drawable.play_not);
 		ts.setTitle("�Ա��΢Ц");
@@ -104,7 +104,7 @@ public class TaskActivity extends Activity{
 		
 		lists.add(ts);//�б�������ݶ���
 		
-		 ts = new Task_setget();
+		 ts = new TaskSetget();
 		ts.setBeijing(R.drawable.baoweiluobo);
 		ts.setBofang(R.drawable.play_not);
 		ts.setTitle("�����ܲ�");

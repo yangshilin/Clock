@@ -14,16 +14,16 @@ import android.widget.TextView;
 import com.example.alarmclok.view.Find_setget_1;
 import com.example.clock.R;
 
-public class MyAdapter_Find_1 extends BaseAdapter{
+public class MyAdapterFindNaozhong extends BaseAdapter{
 	LayoutInflater inflater;//���������
 	Context context;//������
-	List<Find_setget_1> lists;
+	List<Findetget_1> lists;
 	int id;
 	
-	public MyAdapter_Find_1(){//�Զ�����޲ι�����
+	public MyAdapterFindNaozhong(){//�Զ�����޲ι�����
 		
 	}
-	public MyAdapter_Find_1(Context context, int id, List<Find_setget_1> lists){
+	public MyAdapterFindNaozhong(Context context, int id, List<Find_setget_1> lists){
 		this.lists = lists;
 		this.context = context;
 		this.id = id;

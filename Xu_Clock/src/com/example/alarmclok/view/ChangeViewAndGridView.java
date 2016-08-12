@@ -4,17 +4,17 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.GridView;
 /**
- * ½â¾öChangeViewÓëGridViewµÄÇ¶Ì×
+ * ï¿½ï¿½ï¿½ChangeViewï¿½ï¿½GridViewï¿½ï¿½Ç¶ï¿½ï¿½
  * @author Administrator
  *
  */
-public class ChangeView_And_GridView extends GridView{
+public class ChangeViewAndGridView extends GridView{
 
-	public ChangeView_And_GridView(Context context, AttributeSet attrs) {
+	public ChangeViewAndGridView(Context context, AttributeSet attrs) {
 		super(context, attrs);
 		// TODO Auto-generated constructor stub
 	}
-	public ChangeView_And_GridView(Context context){//ÖØÐ´·½·¨
+	public ChangeViewAndGridView(Context context){//ï¿½ï¿½Ð´ï¿½ï¿½ï¿½ï¿½
 		super(context);
 	}
 	@Override

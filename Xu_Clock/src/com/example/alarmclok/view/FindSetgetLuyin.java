@@ -1,6 +1,6 @@
 package com.example.alarmclok.view;
 
-public class Find_setget_2 {
+public class FindSetgetLuyin {
 	String title;
 	String time;
 	String userQuantity;

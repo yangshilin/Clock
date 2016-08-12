@@ -31,7 +31,7 @@ import com.example.clock.R;
 
 
 
-public class Find_Fragment extends Fragment {
+public class FindFragment extends Fragment {
 
 	ImageButton imageButton1;//�������İ�ť
 	ImageButton imageButton2;//������Ϣ��ť
