@@ -1,6 +1,7 @@
 package com.example.adapter;
 
 import java.util.List;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,8 +10,12 @@ import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.example.alarmclok.view.Task_setget;
 
+<<<<<<< HEAD
+=======
+import com.example.alarmclok.view.TaskSetget;
+
+>>>>>>> 76a9568c72b1ce61c7c0ae0b676edcec1992f61b
 public class MyAdapterTask extends BaseAdapter{
 	Context context;//������
 	LayoutInflater inflater;//���������

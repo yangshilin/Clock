@@ -2,9 +2,12 @@ package com.example.adapter;
 
 import java.util.List;
 
+<<<<<<< HEAD
 import com.example.alarmclok.view.FindSetgetLuyin;
 import com.example.clock.R;
 
+=======
+>>>>>>> 76a9568c72b1ce61c7c0ae0b676edcec1992f61b
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,6 +15,12 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.TextView;
 
+<<<<<<< HEAD
+=======
+import com.example.alarmclok.view.FindSetgetLuyin;
+import com.example.clock.R;
+
+>>>>>>> 76a9568c72b1ce61c7c0ae0b676edcec1992f61b
 public class MyAdapterFindLuyin extends BaseAdapter{
 	LayoutInflater inflater;//���������
 	Context context;//������
