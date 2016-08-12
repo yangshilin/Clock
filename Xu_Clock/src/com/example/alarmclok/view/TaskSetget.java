@@ -1,8 +1,8 @@
 package com.example.alarmclok.view;
 
-public class Task_setget {
+public class TaskSetget {
 /**
- * ¶¨ÒåÀàĞÍ
+ * ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
  */	
 	int beijing;
 	int bofang;

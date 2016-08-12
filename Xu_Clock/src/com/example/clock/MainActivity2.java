@@ -1,7 +1,7 @@
 package com.example.clock;
 
 import com.example.alarmclock.LuZhiLingShengActivity;
-import com.example.alarmclok.view.Find_Fragment;
+import com.example.alarmclok.view.FindFragment;
 import com.example.clock.ClockRing.ClockListener;
 import com.example.clock.menu.view.MyHorizontalScrollView;
 import com.xuguoli.activity.Circle;
@@ -162,7 +162,7 @@ public class MainActivity2 extends FragmentActivity {
 		Clock_Fragment clock_Fragment = new Clock_Fragment();
 		Message_Fragment message_Fragment = new Message_Fragment();
 		Circle circle=new Circle();
-		Find_Fragment find_Fragment=new Find_Fragment();
+		FindFragment find_Fragment=new FindFragment();
 		switch (R_id) {
 		case R.id.clock:
 			ft.replace(R.id.linearlayout, clock_Fragment);
