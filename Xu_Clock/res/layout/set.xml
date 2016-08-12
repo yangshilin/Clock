@@ -42,6 +42,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:padding="10dp"
             android:background="@null"
             android:src="@drawable/dexter" />
 
@@ -92,6 +93,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:padding="10dp"
             android:background="@null"
             android:src="@drawable/dexter" />
     </RelativeLayout>
@@ -121,6 +123,7 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:padding="10dp"
             android:background="@null"
             android:src="@drawable/dexter" />
     </RelativeLayout>
@@ -159,8 +162,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:padding="10dp"
             android:background="@null"
-            android:src="@drawable/on_off_not" />
+            android:src="@drawable/set_setector" />
     </RelativeLayout>
 
     <View
@@ -190,8 +194,9 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+            android:padding="10dp"
             android:background="@null"
-            android:src="@drawable/on_off_not" />
+            android:src="@drawable/set_setector" />
 
     </RelativeLayout>
 

@@ -4,6 +4,7 @@ import com.example.clock.R;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.Window;
 
 public class Add extends Activity {
  
@@ -11,6 +12,7 @@ public class Add extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.add);
 	}
 	

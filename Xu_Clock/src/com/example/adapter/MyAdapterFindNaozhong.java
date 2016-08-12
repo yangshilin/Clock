@@ -11,19 +11,19 @@ import android.widget.TextView;
 
 
 
-import com.example.alarmclok.view.Find_setget_1;
+import com.example.alarmclok.view.FindSetgetNaozhong;
 import com.example.clock.R;
 
 public class MyAdapterFindNaozhong extends BaseAdapter{
 	LayoutInflater inflater;//���������
 	Context context;//������
-	List<Findetget_1> lists;
+	List<FindSetgetNaozhong> lists;
 	int id;
 	
 	public MyAdapterFindNaozhong(){//�Զ�����޲ι�����
 		
 	}
-	public MyAdapterFindNaozhong(Context context, int id, List<Find_setget_1> lists){
+	public MyAdapterFindNaozhong(Context context, int id, List<FindSetgetNaozhong> lists){
 		this.lists = lists;
 		this.context = context;
 		this.id = id;
@@ -62,7 +62,7 @@ public class MyAdapterFindNaozhong extends BaseAdapter{
 		TextView praiseQuantity = (TextView) convertView.findViewById(R.id.find_dianzan_shuzhi);
 		TextView commentQuantity = (TextView) convertView.findViewById(R.id.find_dianjicishu_shuzhi);
 		
-		Find_setget_1 fs1 =lists.get(position);
+		FindSetgetNaozhong fs1 =lists.get(position);
 		
 	/*	imageView.setBackgroundDrawable(context.getResources().getDrawable(
 				products.getImgedt())); ����д��*/

@@ -4,6 +4,7 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -18,6 +19,7 @@ public class Set extends Activity implements OnClickListener{
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.set);
 		intView();
 	}
@@ -34,8 +36,8 @@ public class Set extends Activity implements OnClickListener{
 		imageButton1.setOnClickListener(this);
 		imageButton2.setOnClickListener(this);
 		imageButton3.setOnClickListener(this);
-		imageButton4.setOnClickListener(this);
-		imageButton5.setOnClickListener(this);
+		//imageButton4.setOnClickListener(this);
+		//imageButton5.setOnClickListener(this);
 		imageButton6.setOnClickListener(this);
 	}
 	@Override

@@ -1,6 +1,7 @@
 package com.example.adapter;
 
 import java.util.List;
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -9,14 +10,15 @@ import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
-import com.example.alarmclok.view.Task_setget;
+
+import com.example.alarmclok.view.TaskSetget;
 
 public class MyAdapterTask extends BaseAdapter{
 	Context context;//������
 	LayoutInflater inflater;//���������
 	int item;
 	int[] id;//id����
-	List<Task_setget> lists;//�б���Task_setget��װ��
+	List<TaskSetget> lists;//�б���Task_setget��װ��
 	
 	
 	public MyAdapterTask() {//�޲ι�����
@@ -24,7 +26,7 @@ public class MyAdapterTask extends BaseAdapter{
 		super();
 	}
 	
-	public MyAdapterTask(Context context, int item, int[] id, List<Task_setget> lists){
+	public MyAdapterTask(Context context, int item, int[] id, List<TaskSetget> lists){
 		super();
 		this.context = context;
 		this.id = id;
@@ -61,7 +63,7 @@ public class MyAdapterTask extends BaseAdapter{
 		ImageView xingji = (ImageView)convertView.findViewById(id[4]);
 		ImageButton xuanzhe = (ImageButton)convertView.findViewById(id[5]);
 		
-		Task_setget ts =lists.get(position);//�����ʹ���lists�б������� ����position
+		TaskSetget ts =lists.get(position);//�����ʹ���lists�б������� ����position
 		
 		beijing.setImageResource(ts.getBeijing());
 		bofang.setImageResource(ts.getBofang());//�б��������Ķ�������ͼƬ��Դ�����б�Ķ������������͡�

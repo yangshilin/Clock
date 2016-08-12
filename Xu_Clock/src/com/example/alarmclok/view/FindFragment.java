@@ -25,8 +25,8 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.Toast;
 import android.widget.ViewFlipper;
 
-import com.example.adapter.MyAdapter_Find_1;
-import com.example.adapter.MyAdapter_Find_2;
+import com.example.adapter.MyAdapterFindNaozhong;
+import com.example.adapter.MyAdapterFindLuyin;
 import com.example.clock.R;
 
 
@@ -49,12 +49,12 @@ public class FindFragment extends Fragment {
 	ListView listview2;
 	RadioButton radioBtn1;
 	RadioButton radioBtn2;
-	List<Find_setget_1> lists1;
-	List<Find_setget_2> lists2;
-	Find_setget_1 fs1;
-	Find_setget_2 fs2;
-	MyAdapter_Find_1 adapter;
-	MyAdapter_Find_2 adapter2;
+	List<FindSetgetNaozhong> lists1;
+	List<FindSetgetLuyin> lists2;
+	FindSetgetNaozhong fs1;
+	FindSetgetLuyin fs2;
+	MyAdapterFindNaozhong adapter;
+	MyAdapterFindLuyin adapter2;
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -82,8 +82,8 @@ public class FindFragment extends Fragment {
 	 */
 	public void getDate() {
 		// TODO Auto-generated method stub
-		lists1=new ArrayList<Find_setget_1>();
-		Find_setget_1  fs1 = new Find_setget_1();
+		lists1=new ArrayList<FindSetgetNaozhong>();
+		FindSetgetNaozhong  fs1 = new FindSetgetNaozhong();
 		fs1.setTitle("��Ա");
 		fs1.setTime("6/23");
 		fs1.setUserQuantity("32");
@@ -91,7 +91,7 @@ public class FindFragment extends Fragment {
 		fs1.setCommentQuantity("21");
 		lists1.add(fs1);
 		
-		 fs1 = new Find_setget_1();
+		 fs1 = new FindSetgetNaozhong();
 			fs1.setTitle("�Է�˯���򶹶�");
 			fs1.setTime("6/25");
 			fs1.setUserQuantity("42");
@@ -99,7 +99,7 @@ public class FindFragment extends Fragment {
 			fs1.setCommentQuantity("11");
 			lists1.add(fs1);
 			
-		fs1 = new Find_setget_1();
+		fs1 = new FindSetgetNaozhong();
 			fs1.setTitle("�ҵ�δ��������");
 			fs1.setTime("6/30");
 			fs1.setUserQuantity("82");
@@ -107,7 +107,7 @@ public class FindFragment extends Fragment {
 			fs1.setCommentQuantity("31");
 			lists1.add(fs1);
 			
-			fs1 = new Find_setget_1();
+			fs1 = new FindSetgetNaozhong();
 			fs1.setTitle("ʮ��");
 			fs1.setTime("6/30");
 			fs1.setUserQuantity("51");
@@ -115,7 +115,7 @@ public class FindFragment extends Fragment {
 			fs1.setCommentQuantity("23");
 			lists1.add(fs1);
 			
-			fs1 = new Find_setget_1();
+			fs1 = new FindSetgetNaozhong();
 			fs1.setTitle("����");
 			fs1.setTime("6/30");
 			fs1.setUserQuantity("54");
@@ -123,7 +123,7 @@ public class FindFragment extends Fragment {
 			fs1.setCommentQuantity("31");
 			lists1.add(fs1);
 			
-			fs1 = new Find_setget_1();
+			fs1 = new FindSetgetNaozhong();
 			fs1.setTitle("��Լ�");
 			fs1.setTime("7/2");
 			fs1.setUserQuantity("541");
@@ -131,16 +131,16 @@ public class FindFragment extends Fragment {
 			fs1.setCommentQuantity("31");
 			lists1.add(fs1);
 
-			MyAdapter_Find_1 myAdapter1 = new MyAdapter_Find_1(getActivity(),
+			MyAdapterFindNaozhong myAdapter1 = new MyAdapterFindNaozhong(getActivity(),
 					R.layout.activity_find_1_1, lists1);
 			listview1.setAdapter(myAdapter1);
 			listview1.setOnItemClickListener(onItemClickListener);
 }
 	private void getDate2() {
 		// TODO Auto-generated method stub	
-		lists2=new ArrayList<Find_setget_2>();
+		lists2=new ArrayList<FindSetgetLuyin>();
 		for (int i = 0; i < 5; i++) {
-		Find_setget_2  fs2 = new Find_setget_2();
+		FindSetgetLuyin  fs2 = new FindSetgetLuyin();
 		fs2.setTitle("˯����");
 		fs2.setTime("6/23");
 		fs2.setUserQuantity("32");
@@ -148,7 +148,7 @@ public class FindFragment extends Fragment {
 		fs2.setCommentQuantity("21");
 		lists2.add(fs2);
 		
-		 fs2 = new Find_setget_2();
+		 fs2 = new FindSetgetLuyin();
 			fs2.setTitle("ʹ��");
 			fs2.setTime("6/25");
 			fs2.setUserQuantity("42");
@@ -156,7 +156,7 @@ public class FindFragment extends Fragment {
 			fs2.setCommentQuantity("11");
 			lists2.add(fs2);
 	}
-		MyAdapter_Find_2 myAdapter2 = new MyAdapter_Find_2(getActivity(),
+		MyAdapterFindLuyin myAdapter2 = new MyAdapterFindLuyin(getActivity(),
 				R.layout.activity_find_1_2, lists2);
 		listview1.setAdapter(myAdapter2);
 		listview1.setOnItemClickListener(onItemClickListener);

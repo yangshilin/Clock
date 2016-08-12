@@ -2,6 +2,7 @@ package com.xuguoli.activity;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.view.Window;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
@@ -17,6 +18,7 @@ public class Third_party extends Activity implements OnCheckedChangeListener {
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.third_party_login);
 		intView();
 
