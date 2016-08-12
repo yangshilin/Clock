@@ -10,7 +10,7 @@ import android.widget.Toast;
 
 import com.example.clock.R;
 
-public class Third_party extends Activity implements OnCheckedChangeListener {
+public class Third_party extends Activity {
 	RadioGroup radioGroup;
 	RadioButton radioButton1, radioButton2, radioButton3;
 
@@ -31,24 +31,26 @@ public class Third_party extends Activity implements OnCheckedChangeListener {
 		radioButton1 = (RadioButton) findViewById(R.id.radioButton1);
 		radioButton2 = (RadioButton) findViewById(R.id.radioButton2);
 		radioButton3 = (RadioButton) findViewById(R.id.radioButton3);
-
+		radioGroup.setOnCheckedChangeListener(changeListener);
 	}
 
-	@Override
-	public void onCheckedChanged(RadioGroup group, int checkedId) {
-		switch (checkedId) {
-		case R.id.radioButton1:
-			weixinLogon();
-			break;
-
-		case R.id.radioButton2:
-			weiboLogon();
-			break;
-		case R.id.radioButton3:
-			qqLogon();
-			break;
+	OnCheckedChangeListener changeListener=new OnCheckedChangeListener() {
+		
+		@Override
+		public void onCheckedChanged(RadioGroup group, int checkedId) {
+			switch (checkedId) {
+			case R.id.radioButton1:
+				weixinLogon();
+				break;
+			case R.id.radioButton2:
+				weiboLogon();
+				break;
+			case R.id.radioButton3:
+				qqLogon();
+				break;
+			}
 		}
-	}
+	};
 	public void weixinLogon(){
 	Toast.makeText(this, "微信登录还未开发", Toast.LENGTH_LONG).show();
 	}

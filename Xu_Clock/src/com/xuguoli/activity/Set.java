@@ -36,8 +36,8 @@ public class Set extends Activity implements OnClickListener{
 		imageButton1.setOnClickListener(this);
 		imageButton2.setOnClickListener(this);
 		imageButton3.setOnClickListener(this);
-		//imageButton4.setOnClickListener(this);
-		//imageButton5.setOnClickListener(this);
+		imageButton4.setOnClickListener(this);
+		imageButton5.setOnClickListener(this);
 		imageButton6.setOnClickListener(this);
 	}
 	@Override
