@@ -1,6 +1,7 @@
 package com.xuguoli.activity;
 
 import android.app.Activity;
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -39,7 +40,7 @@ public class ForgotPassword_activity extends Activity implements OnClickListener
 		Toast.makeText(this, "验证码的发送尚未开发", Toast.LENGTH_LONG).show();
 	}
 	public void changePassword(){//找回密码进入
-		Toast.makeText(this, "找回密码进入尚未开发", Toast.LENGTH_LONG).show();
+		startActivity(new Intent(ForgotPassword_activity.this,Set_new_passActivity.class));
 	}
 	
 

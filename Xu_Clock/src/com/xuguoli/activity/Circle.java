@@ -19,8 +19,9 @@ public class Circle extends Fragment {
 	ListView listView;
 
 	int[] id = { R.id.lvphoto, R.id.tvname, R.id.phonename, R.id.pull_down,
-			R.id.tvsend, R.id.playmusi, R.id.tvtime, R.id.ivlove, R.id.lvnumb,
-			R.id.impinglun, R.id.pinglun_numb };
+			R.id.tvsend, R.id.playmusi, R.id.tvtime, R.id.pinglun_numb,
+			R.id.impinglun, R.id.lvnumb,R.id.ivlove
+			 };
 	MybaseAdapter adapter;
 	List<Cricle> list;
 
@@ -65,10 +66,24 @@ public class Circle extends Fragment {
 		cricle.setZuoyong("夏是夏天的夏_分享了一段语音");
 		cricle.setButton(R.drawable.playmusic);
 		cricle.setTime("22:47");
-		cricle.setColltect(R.drawable.praise);
-		cricle.setNumb("20");
-		cricle.setMessage(R.drawable.comment);
 		cricle.setPinglun("31");
+		cricle.setMessage(R.drawable.comment);
+		cricle.setNumb("20");
+		cricle.setColltect(R.drawable.praise);
+		list.add(cricle);
+		
+		cricle = new Cricle();
+		cricle.setIamgeId(R.drawable.playmusic);
+		cricle.setUsename("夏是夏天的夏_");
+		cricle.setFromphone("来自iPhone 6");
+		cricle.setButton(R.drawable.pull_down);
+		cricle.setZuoyong("夏是夏天的夏_分享了一段语音");
+		cricle.setButton(R.drawable.playmusic);
+		cricle.setTime("22:47");
+		cricle.setPinglun("31");
+		cricle.setMessage(R.drawable.comment);
+		cricle.setNumb("20");
+		cricle.setColltect(R.drawable.praise);
 		list.add(cricle);
 		cricle = new Cricle();
 		cricle.setIamgeId(R.drawable.playmusic);
@@ -78,10 +93,10 @@ public class Circle extends Fragment {
 		cricle.setZuoyong("夏是夏天的夏_分享了一段语音");
 		cricle.setButton(R.drawable.playmusic);
 		cricle.setTime("22:47");
-		cricle.setColltect(R.drawable.praise);
-		cricle.setNumb("20");
-		cricle.setMessage(R.drawable.comment);
 		cricle.setPinglun("31");
+		cricle.setMessage(R.drawable.comment);
+		cricle.setNumb("20");
+		cricle.setColltect(R.drawable.praise);
 		list.add(cricle);
 		cricle = new Cricle();
 		cricle.setIamgeId(R.drawable.playmusic);
@@ -91,10 +106,10 @@ public class Circle extends Fragment {
 		cricle.setZuoyong("夏是夏天的夏_分享了一段语音");
 		cricle.setButton(R.drawable.playmusic);
 		cricle.setTime("22:47");
-		cricle.setColltect(R.drawable.praise);
-		cricle.setNumb("20");
-		cricle.setMessage(R.drawable.comment);
 		cricle.setPinglun("31");
+		cricle.setMessage(R.drawable.comment);
+		cricle.setNumb("20");
+		cricle.setColltect(R.drawable.praise);
 		list.add(cricle);
 		cricle = new Cricle();
 		cricle.setIamgeId(R.drawable.playmusic);
@@ -104,10 +119,10 @@ public class Circle extends Fragment {
 		cricle.setZuoyong("夏是夏天的夏_分享了一段语音");
 		cricle.setButton(R.drawable.playmusic);
 		cricle.setTime("22:47");
-		cricle.setColltect(R.drawable.praise);
-		cricle.setNumb("20");
-		cricle.setMessage(R.drawable.comment);
 		cricle.setPinglun("31");
+		cricle.setMessage(R.drawable.comment);
+		cricle.setNumb("20");
+		cricle.setColltect(R.drawable.praise);
 		list.add(cricle);
 		cricle = new Cricle();
 		cricle.setIamgeId(R.drawable.playmusic);
@@ -117,10 +132,10 @@ public class Circle extends Fragment {
 		cricle.setZuoyong("夏是夏天的夏_分享了一段语音");
 		cricle.setButton(R.drawable.playmusic);
 		cricle.setTime("22:47");
-		cricle.setColltect(R.drawable.praise);
-		cricle.setNumb("20");
-		cricle.setMessage(R.drawable.comment);
 		cricle.setPinglun("31");
+		cricle.setMessage(R.drawable.comment);
+		cricle.setNumb("20");
+		cricle.setColltect(R.drawable.praise);
 		list.add(cricle);
 		cricle = new Cricle();
 		cricle.setIamgeId(R.drawable.playmusic);
@@ -130,10 +145,10 @@ public class Circle extends Fragment {
 		cricle.setZuoyong("夏是夏天的夏_分享了一段语音");
 		cricle.setButton(R.drawable.playmusic);
 		cricle.setTime("22:47");
-		cricle.setColltect(R.drawable.praise);
-		cricle.setNumb("20");
-		cricle.setMessage(R.drawable.comment);
 		cricle.setPinglun("31");
+		cricle.setMessage(R.drawable.comment);
+		cricle.setNumb("20");
+		cricle.setColltect(R.drawable.praise);
 		list.add(cricle);
 		cricle = new Cricle();
 		cricle.setIamgeId(R.drawable.playmusic);
@@ -143,11 +158,51 @@ public class Circle extends Fragment {
 		cricle.setZuoyong("夏是夏天的夏_分享了一段语音");
 		cricle.setButton(R.drawable.playmusic);
 		cricle.setTime("22:47");
-		cricle.setColltect(R.drawable.praise);
-		cricle.setNumb("20");
-		cricle.setMessage(R.drawable.comment);
 		cricle.setPinglun("31");
+		cricle.setMessage(R.drawable.comment);
+		cricle.setNumb("20");
+		cricle.setColltect(R.drawable.praise);
 		list.add(cricle);
-
+		cricle = new Cricle();
+		cricle.setIamgeId(R.drawable.playmusic);
+		cricle.setUsename("夏是夏天的夏_");
+		cricle.setFromphone("来自iPhone 6");
+		cricle.setButton(R.drawable.pull_down);
+		cricle.setZuoyong("夏是夏天的夏_分享了一段语音");
+		cricle.setButton(R.drawable.playmusic);
+		cricle.setTime("22:47");
+		cricle.setPinglun("31");
+		cricle.setMessage(R.drawable.comment);
+		cricle.setNumb("20");
+		cricle.setColltect(R.drawable.praise);
+		list.add(cricle);
+		cricle = new Cricle();
+		cricle.setIamgeId(R.drawable.playmusic);
+		cricle.setUsename("夏是夏天的夏_");
+		cricle.setFromphone("来自iPhone 6");
+		cricle.setButton(R.drawable.pull_down);
+		cricle.setZuoyong("夏是夏天的夏_分享了一段语音");
+		cricle.setButton(R.drawable.playmusic);
+		cricle.setTime("22:47");
+		cricle.setPinglun("31");
+		cricle.setMessage(R.drawable.comment);
+		cricle.setNumb("20");
+		cricle.setColltect(R.drawable.praise);
+		list.add(cricle);
+		cricle = new Cricle();
+		cricle.setIamgeId(R.drawable.playmusic);
+		cricle.setUsename("夏是夏天的夏_");
+		cricle.setFromphone("来自iPhone 6");
+		cricle.setButton(R.drawable.pull_down);
+		cricle.setZuoyong("夏是夏天的夏_分享了一段语音");
+		cricle.setButton(R.drawable.playmusic);
+		cricle.setTime("22:47");
+		cricle.setPinglun("31");
+		cricle.setMessage(R.drawable.comment);
+		cricle.setNumb("20");
+		cricle.setColltect(R.drawable.praise);
+		list.add(cricle);
+		
+		
 	}
 }

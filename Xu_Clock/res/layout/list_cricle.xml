@@ -2,18 +2,20 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/backg"
+    android:background="#90000000"
     android:orientation="vertical" >
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp" 
+        android:layout_marginLeft="19dp">
 
         <ImageView
             android:id="@+id/lvphoto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:padding="10dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
             android:src="@drawable/head_portrait" />
 
         <TextView
@@ -21,25 +23,29 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentTop="true"
-            android:layout_marginTop="5dp"
+            android:layout_marginLeft="8dp"
             android:layout_toRightOf="@+id/lvphoto"
             android:text="夏是夏天的夏_"
-            android:textSize="17sp" />
+            android:textSize="14sp" 
+            android:textColor="#ffffff"/>
 
         <TextView
             android:id="@+id/phonename"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@+id/tvname"
+            android:layout_marginLeft="8dp"
             android:layout_toRightOf="@+id/lvphoto"
-            android:text="来自iPhone 6" />
+            android:text="来自iPhone 6" 
+            android:textSize="8sp"/>
 
         <ImageButton
             android:id="@+id/pull_down"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="22dp"
+            android:layout_height="22dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+        	android:layout_marginRight="19dp"
             android:src="@drawable/pull_down" />
     </RelativeLayout>
 
@@ -47,57 +53,75 @@
         android:id="@+id/tvsend"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="5dp"
-        android:text="夏是夏天的夏_分享了一段语音。" />
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="9dp"
+        android:text="夏是夏天的夏_分享了一段语音。" 
+        android:textSize="14sp"
+        android:textColor="#ffffff"/>
 
     <ImageView
         android:id="@+id/playmusi"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginLeft="15dp"
-        android:layout_marginTop="15dp"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="19dp"
+        android:layout_marginTop="17dp"
         android:background="@drawable/playmusic" />
 
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:layout_marginTop="15dp" >
+        android:layout_marginTop="16dp" >
 
         <TextView
             android:id="@+id/tvtime"
-            android:layout_width="0dp"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="15dp"
-            android:layout_weight="1"
-            android:text="22:47" />
+            android:layout_marginLeft="19dp"
+            android:layout_marginBottom="13.5dp"
+            android:text="22:47" 
+            android:textSize="10sp"/>
 
-        <ImageView
-            android:id="@+id/ivlove"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:src="@drawable/praise" />
-         <TextView
-             android:id="@+id/lvnumb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:gravity="center_vertical"
-            android:text="20"
-            android:textColor="#FFFFFF" />
-         <ImageView 
-             android:id="@+id/impinglun"
-             android:layout_width="wrap_content"
-             android:layout_height="wrap_content"
-             android:gravity="center_vertical"
-             android:src="@drawable/comment"/>
-         <TextView 
+        <TextView 
              android:id="@+id/pinglun_numb"
              android:layout_width="wrap_content"
              android:layout_height="wrap_content"
              android:gravity="center_vertical"
-             android:text="31"/>
-    </LinearLayout>
+             android:layout_alignParentRight="true"
+              android:layout_centerVertical="true"
+             android:layout_marginRight="19dp"
+             android:layout_marginBottom="12dp"
+             android:text="31"
+             android:textSize="14sp"
+             android:textColor="#ffffff"/>
+          <ImageView 
+             android:id="@+id/impinglun"
+             android:layout_width="22dp"
+             android:layout_height="22dp"
+             android:layout_centerVertical="true"
+             android:layout_toLeftOf="@+id/pinglun_numb"
+             android:src="@drawable/comment"/>
+          <TextView
+             android:id="@+id/lvnumb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/impinglun"
+            android:layout_marginRight="19dp"
+            android:textSize="14sp"
+            android:text="20"
+           android:textColor="#ffffff"/>
+        <ImageView
+            android:id="@+id/ivlove"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_toLeftOf="@+id/lvnumb"
+           android:layout_centerVertical="true"
+           android:layout_marginLeft="6dp"
+            android:src="@drawable/praise" />
+         
+       
+         
+    </RelativeLayout>
 
 </LinearLayout>
