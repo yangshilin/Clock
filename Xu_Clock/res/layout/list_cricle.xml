@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#90000000"
+
     android:orientation="vertical" >
 
     <RelativeLayout
@@ -117,7 +118,7 @@
             android:layout_height="20dp"
             android:layout_toLeftOf="@+id/lvnumb"
            android:layout_centerVertical="true"
-           android:layout_marginLeft="6dp"
+           android:layout_marginRing="6dp"
             android:src="@drawable/praise" />
          
        
