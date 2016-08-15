@@ -2,7 +2,7 @@ package com.example.alarmclok.view;
 
 public class FindSetgetNaozhong {
 	/**
-	 *��������
+	 *定义类型
 	 */
 	String title;
 	String time;

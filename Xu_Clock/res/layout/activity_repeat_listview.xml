@@ -2,55 +2,61 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:background="@drawable/background" >
+    android:background="@drawable/background"
+    android:orientation="vertical" >
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:alpha="0.6"
-        android:background="@color/darkblack" >
+        android:background="#90000000" >
 
-        <!-- android:alpha="0.6" 透明度 -->
+       
 
         <ImageButton
-            android:id="@+id/task_fanhui_button"
+            android:id="@+id/repeat_fanhui_button_gonzuori"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
+            android:layout_marginLeft="5dp"
             android:background="@null"
-            android:padding="5dp"
+            android:padding="10dp"
             android:src="@drawable/return_not" />
 
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:text="任务"
+            android:text="重复"
             android:textColor="@color/gainsboro"
             android:textSize="20sp" />
     </RelativeLayout>
 
-    <RelativeLayout
+    <View
         android:layout_width="match_parent"
+        android:layout_height="15dp" />
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:background="@null" >
+        android:background="#70000000" >
 
         <ListView
-            android:id="@+id/task.listview"
+            android:id="@+id/repeat_ListView"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
+            android:layout_marginLeft="45dp"
+            android:background="@null"
             android:cacheColorHint="@null"
-            android:divider="@null"
-            android:dividerHeight="15dp"
-            android:scrollbars="none" />
-        <!-- android:divider="1dp" 行间颜色 -->
-        <!-- android:dividerHeight="10dp" 行间距离，【没运行或是没加行间颜色看不出效果】 -->
-        <!-- android:numColumns="2" 列数 2列 -->
-        <!-- android:scrollbars="none" 滚动条无样式 ，不改变颜色 -->
+            android:divider="@color/deepgray"
+            android:dividerHeight="1dp"
+            android:scrollbars="none" >
+
+            <!-- android:alpha="0.6" 透明度 -->
+            <!-- android:divider="1dp" 行间颜色 -->
+            <!-- android:dividerHeight="10dp" 行间距离，【没运行或是没加行间颜色看不出效果】 -->
+            <!-- android:numColumns="2" 列数 2列 -->
+            <!-- android:scrollbars="none" 滚动条无样式 ，不改变颜色 -->
+        </ListView>
     </RelativeLayout>
 
 </LinearLayout>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+     >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       android:background="#90000000">
+	<!-- android:background="#90[前面2位是透明值]000000[后面6位是颜色]" -->
+        <ImageButton
+            android:id="@+id/find_gerenzhongxin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:background="@null"
+            android:padding="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/personage" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="发现"
+            android:textColor="@color/white"
+            android:textSize="22sp" />
+
+        <ImageButton
+            android:id="@+id/find_tianjia"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:background="@null"
+            android:padding="5dp"
+            android:src="@drawable/addto" />
+    </RelativeLayout>
+
+   
+    <ListView
+        android:id="@+id/find_listview_1"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:cacheColorHint="@null"
+        android:divider="@null"
+        android:dividerHeight="10dp"
+        android:scrollbars="none" />
+
+    <ListView
+        android:id="@+id/find_listview_2"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:background="@null"
+        android:cacheColorHint="@null"
+        android:divider="@null"
+        android:dividerHeight="10dp"
+        android:scrollbars="none" >
+
+    </ListView>
+
+</LinearLayout>

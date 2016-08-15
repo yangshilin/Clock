@@ -4,7 +4,7 @@ import android.content.Context;
 import android.util.AttributeSet;
 import android.widget.GridView;
 /**
- * ���ChangeView��GridView��Ƕ��
+ * 解决ChangeView与GridView的嵌套
  * @author Administrator
  *
  */
