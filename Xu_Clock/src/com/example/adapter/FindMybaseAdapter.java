@@ -14,19 +14,19 @@ import android.widget.TextView;
 
 import com.example.alarmclok.view.Parameter;
 
-public class Find_MybaseAdapter extends BaseAdapter{	
-	Context context;//ÉÏÏÂÎÄ
-	LayoutInflater inflater;//²¼¾ÖÌî³äÆ÷
+public class FindMybaseAdapter extends BaseAdapter{	
+	Context context;//ä¸Šä¸‹æ–‡
+	LayoutInflater inflater;//å¸ƒå±€å¡«å……å™¨
 	int item;
-	int[] id;//idÊı×é
-	List<Parameter> list;//ÁĞ±í¼¯ºÏparameter·â×°Àà
+	int[] id;//idæ•°ç»„
+	List<Parameter> list;//åˆ—è¡¨é›†åˆparameterå°è£…ç±»
 	
 	
-	public Find_MybaseAdapter(){//ÎŞ²Î¹¹ÔìÆ÷
+	public FindMybaseAdapter(){//æ— å‚æ„é€ å™¨
 		super();
 	}
 	
-	public Find_MybaseAdapter(Context context,int item, int[] id, List<Parameter> list){
+	public FindMybaseAdapter(Context context,int item, int[] id, List<Parameter> list){
 		super();
 		this.context = context;
 		this.item = item;

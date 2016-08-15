@@ -3,18 +3,22 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-
-    <RelativeLayout
+    
+<!-- listview 添加参数最好不要用线性布局写容易报错 -->
+  <RelativeLayout
         android:id="@+id/task_shiping_buju"
 		android:layout_width="fill_parent"
-        android:layout_height="170dp"
+        android:layout_height="180dp"
        >
 		 <ImageView 
 		    android:id="@+id/task_shuju_beijing"
 		    android:layout_width="match_parent"
 		    android:layout_height="fill_parent"
-		    android:background="@null"
+		    android:scaleType="centerCrop"
+		    android:background="@drawable/pingjingdeyuzhou"
 		    android:alpha="0.8"/>
+		 
+		 <!-- android:scaleType="centerCrop"  居中放大 -->
 		   <!--  android:background="@drawable/pingjingdeyuzhou" --> 
         <!--  android:alpha="0.8" 透明度-->
         
@@ -42,7 +46,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/task_shiping_title"
-            android:layout_marginLeft="110dp"
+            android:layout_alignLeft="@id/task_shiping_title"
             android:layout_marginTop="5dp"
             android:text="难度:"
             android:textColor="@color/white" />
@@ -50,13 +54,50 @@
         <!-- android:layout_below="@id/task_shiping_title" 调用id相对某控件下面 -->
 			
 			<ImageView 
-			android:id="@+id/task_xingji"
+			android:id="@+id/task_xingji_one"
 			android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_below="@id/task_shiping_title"
             android:layout_marginTop="8dp"
             android:layout_toRightOf="@id/task_textview_dengji"
-            android:src="@drawable/xingxing_dengji_1"
+            android:src="@drawable/star_two"
+            />
+			
+				<ImageView 
+			android:id="@+id/task_xingji_two"
+			android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/task_shiping_title"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/task_xingji_one"
+            android:src="@drawable/star_two"
+            />
+					<ImageView 
+			android:id="@+id/task_xingji_three"
+			android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/task_shiping_title"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/task_xingji_two"
+            android:src="@drawable/star_two"
+            />
+						<ImageView 
+			android:id="@+id/task_xingji_four"
+			android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/task_shiping_title"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/task_xingji_three"
+            android:src="@drawable/star_two"
+            />
+							<ImageView 
+			android:id="@+id/task_xingji_five"
+			android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/task_shiping_title"
+            android:layout_marginTop="8dp"
+            android:layout_toRightOf="@id/task_xingji_four"
+            android:src="@drawable/star_two"
             />
      <!--    <RatingBar
             android:id="@+id/task_xingji"
@@ -79,12 +120,37 @@
             android:id="@+id/task_xianche_shouchang"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_below="@id/task_xingji"
+            android:layout_below="@id/task_textview_dengji"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="10dp"
             android:background="@null"
             android:src="@drawable/select" />
 
     </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 </LinearLayout>
