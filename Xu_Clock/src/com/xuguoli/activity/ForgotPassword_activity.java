@@ -42,7 +42,7 @@ public class ForgotPassword_activity extends Activity implements OnClickListener
 		Toast.makeText(this, "验证码的发送尚未开发", Toast.LENGTH_LONG).show();
 	}
 	public void changePassword(){//找回密码进入
-		startActivity(new Intent(ForgotPassword_activity.this,Set_new_passActivity.class));
+		startActivity(new Intent(ForgotPassword_activity.this,Logon.class));
 	}
 	
 
