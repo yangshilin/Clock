@@ -16,6 +16,7 @@ import com.example.alarmclok.view.TaskSetget;
 import com.example.clock.MainActivity2;
 import com.example.clock.R;
 
+
 public class TaskActivity extends Activity{
 	/**
 	 * listview�������
