@@ -62,7 +62,7 @@
                             android:layout_weight="1"
                             android:drawableTop="@drawable/find"
                             android:text="发现"
-                            android:textColor="#FFF"
+                            android:textColor="#a7a9a8"
                             android:textSize="13sp" />
 
                         <RadioButton
@@ -73,7 +73,7 @@
                             android:layout_weight="1"
                             android:drawableTop="@drawable/ring"
                             android:text="圈子"
-                            android:textColor="#FFF"
+                            android:textColor="#a7a9a8"
                             android:textSize="13sp" />
 
                         <RadioButton
@@ -84,7 +84,7 @@
                             android:layout_weight="1"
                             android:drawableTop="@drawable/message"
                             android:text="消息"
-                            android:textColor="#FFF"
+                            android:textColor="#a7a9a8"
                             android:textSize="13sp" />
                     </RadioGroup>
                 </LinearLayout>
