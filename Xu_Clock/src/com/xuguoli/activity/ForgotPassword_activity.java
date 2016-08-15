@@ -1,5 +1,8 @@
 package com.xuguoli.activity;
 
+
+import com.example.clock.R;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,7 +14,6 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.clock.R;
 
 public class ForgotPassword_activity extends Activity implements OnClickListener{
 	private EditText changeet_phone, changeet_password;// 输入修改的电话
