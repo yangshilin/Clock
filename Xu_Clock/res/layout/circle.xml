@@ -6,13 +6,14 @@
 
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content" >
-
+        android:layout_height="wrap_content"
+        >
+		
         <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
+            android:layout_marginTop="9.5dp"
             android:layout_marginLeft="15dp"
             android:src="@drawable/personage" />
 
@@ -20,14 +21,14 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerInParent="true"
-            android:layout_centerVertical="true"
             android:text="圈子"
+            android:layout_marginTop="19dp"
             android:textColor="#ffffff"
-            android:textSize="20sp" />
+            android:textSize="18sp" />
 
         <ImageButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:background="@null"
@@ -37,15 +38,15 @@
 
     <View
         android:layout_width="match_parent"
-        android:layout_height="0.8dp"
+        android:layout_height="0.5dp"
         android:background="#ffffff" />
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp"
         android:background="@drawable/sreachback" >
 
         <ImageView
@@ -60,7 +61,7 @@
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toRightOf="@+id/imagesearch"
-            android:text="搜素"
+            android:text="搜索"
             />
     </RelativeLayout>
 
@@ -68,6 +69,10 @@
         android:id="@+id/lvcircle"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="20dp" />
+        android:dividerHeight="15dp"
+        android:divider="@null"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:layout_marginTop="15dp" />
 
 </LinearLayout>

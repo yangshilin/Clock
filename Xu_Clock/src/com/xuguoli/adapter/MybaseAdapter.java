@@ -65,11 +65,11 @@ public class MybaseAdapter extends BaseAdapter {
 		TextView zuoyong = (TextView) convertView.findViewById(id[4]);
 		ImageView player = (ImageView) convertView.findViewById(id[5]);
 		TextView time = (TextView) convertView.findViewById(id[6]);
-		ImageView colltect = (ImageView) convertView.findViewById(id[7]);
-		TextView numb = (TextView) convertView.findViewById(id[8]);
-		ImageView message = (ImageView) convertView.findViewById(id[9]);
-		TextView pinglun = (TextView) convertView.findViewById(id[10]);
-
+		TextView pinglun = (TextView) convertView.findViewById(id[7]);
+		ImageView message = (ImageView) convertView.findViewById(id[8]);
+		TextView numb = (TextView) convertView.findViewById(id[9]);
+		ImageView colltect = (ImageView) convertView.findViewById(id[10]);
+		
 		Cricle cricle = list.get(position);
 
 		tongxiang.setImageResource(cricle.getIamgeId());
@@ -79,11 +79,11 @@ public class MybaseAdapter extends BaseAdapter {
 		zuoyong.setText(cricle.getZuoyong());
 		player.setImageResource(cricle.getPlayer());
 		time.setText(cricle.getTime());
-		colltect.setImageResource(cricle.getColltect());
-		numb.setText(cricle.getNumb());
-		message.setImageResource(cricle.getMessage());
 		pinglun.setText(cricle.getPinglun());
-
+		message.setImageResource(cricle.getMessage());
+		numb.setText(cricle.getNumb());
+		colltect.setImageResource(cricle.getColltect());
+		
 		return convertView;
 	}
 
