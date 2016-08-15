@@ -40,8 +40,8 @@ public class FindFragment extends Fragment {
 	 */
 	ViewFlipper lunbo;//广告动画
 	GestureDetector huadong;//视图点击滑动【手势检测器】
-	LayoutInflater innflater;
-	LinearLayout linearlayout;
+	//LayoutInflater innflater;
+	//LinearLayout linearlayout;
 	/**
 	 * 头视图
 	 */
@@ -58,8 +58,7 @@ public class FindFragment extends Fragment {
 	List<FindSetgetLuyin> lists2;
 	FindSetgetNaozhong fs1;
 	FindSetgetLuyin fs2;
-	//MyAdapterFindNaozhong adapter;
-	//MyAdapterFindLuyin adapter2;
+	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -167,6 +166,46 @@ public class FindFragment extends Fragment {
 			fs1.setCommentQuantity("31");
 			lists1.add(fs1);
 
+			fs1 = new FindSetgetNaozhong();
+			fs1.setTitle("今夜20岁");
+			fs1.setTime("7/2");
+			fs1.setUserQuantity("541");
+			fs1.setPraiseQuantity("61");
+			fs1.setCommentQuantity("31");
+			lists1.add(fs1);
+			
+			fs1 = new FindSetgetNaozhong();
+			fs1.setTitle("说不出口");
+			fs1.setTime("7/2");
+			fs1.setUserQuantity("541");
+			fs1.setPraiseQuantity("61");
+			fs1.setCommentQuantity("31");
+			lists1.add(fs1);
+			
+			fs1 = new FindSetgetNaozhong();
+			fs1.setTitle("寂寞可以");
+			fs1.setTime("7/2");
+			fs1.setUserQuantity("541");
+			fs1.setPraiseQuantity("61");
+			fs1.setCommentQuantity("31");
+			lists1.add(fs1);
+			
+			fs1 = new FindSetgetNaozhong();
+			fs1.setTitle("说不出口");
+			fs1.setTime("7/2");
+			fs1.setUserQuantity("541");
+			fs1.setPraiseQuantity("61");
+			fs1.setCommentQuantity("31");
+			lists1.add(fs1);
+			
+			fs1 = new FindSetgetNaozhong();
+			fs1.setTitle("生活不止眼前的苟且");
+			fs1.setTime("7/2");
+			fs1.setUserQuantity("541");
+			fs1.setPraiseQuantity("61");
+			fs1.setCommentQuantity("31");
+			lists1.add(fs1);
+			
 			MyAdapterFindNaozhong myAdapter1 = new MyAdapterFindNaozhong(getActivity(),
 					R.layout.activity_find_download, lists1);
 			listNaozhong.setAdapter(myAdapter1);
@@ -175,7 +214,7 @@ public class FindFragment extends Fragment {
 	private void getDate2() {
 		// TODO Auto-generated method stub	
 		lists2=new ArrayList<FindSetgetLuyin>();
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 6; i++) {
 		FindSetgetLuyin  fs2 = new FindSetgetLuyin();
 		fs2.setTitle("睡觉觉");
 		fs2.setTime("6/23");
