@@ -24,7 +24,7 @@
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <activity
-            android:name="com.xuguoli.acyivity.Logon"
+            android:name="com.xuguoli.activity.Logon"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,7 +34,7 @@
             
         </activity>
         <activity
-            android:name="com.xuguoli.acyivity.Login"
+            android:name="com.xuguoli.activity.Login"
             android:launchMode="singleTask"/>
        <activity
             android:name="com.example.alarmclock.BianJiNaoZhongActivity"
@@ -58,13 +58,13 @@
             android:name="com.example.clock.MainActivity2"
             android:launchMode="singleTask"/>
         <activity
-            android:name="com.xuguoli.acyivity.Add"
+            android:name="com.xuguoli.activity.Add"
             android:launchMode="singleTask"/>
         <activity
-            android:name="com.xuguoli.acyivity.Set"
+            android:name="com.xuguoli.activity.Set"
             android:launchMode="singleTask"/>
          <activity
-             android:name="com.xuguoli.acyivity.Third_party"/>
+             android:name="com.xuguoli.activity.Third_party"/>
        
         <activity
             android:name="com.mob.tools.MobUIShell"
