@@ -55,6 +55,7 @@ public class MyHorizontalScrollView extends HorizontalScrollView {
 		super.onLayout(changed, l, t, r, b);
 		if (changed) {
 			this.scrollTo(mMenuWidth, 0);
+			isOpen=true;
 		}
 	}
 
@@ -82,8 +83,10 @@ public class MyHorizontalScrollView extends HorizontalScrollView {
 	public void openSroll() {
 		if (isOpen==false) {
 			this.smoothScrollTo(mMenuWidth, 0);
+			isOpen=true;
 		} else {
 			this.smoothScrollTo(0, 0);
+			isOpen=false;
 		}
 	}
 	

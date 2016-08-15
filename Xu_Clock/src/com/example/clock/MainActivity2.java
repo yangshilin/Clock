@@ -39,6 +39,7 @@ public class MainActivity2 extends FragmentActivity {
 	TextView signature;
 	ImageView record;
 	TextView text_record;
+	ImageView personage;
 	MyHorizontalScrollView mMyHorizontalScrollView;
 
 	protected void onCreate(Bundle arg0) {
@@ -47,19 +48,20 @@ public class MainActivity2 extends FragmentActivity {
 		setContentView(R.layout.activity_shouye);
 		setFragment(R.id.clock);
 		radioGroup = (RadioGroup) findViewById(R.id.radiogroup);
+		radioGroup.setOnCheckedChangeListener(checkedChangeListener);
 		clock = (RadioButton) findViewById(R.id.clock);
 		found = (RadioButton) findViewById(R.id.found);
 		ring = (RadioButton) findViewById(R.id.ring);
 		record = (ImageView) findViewById(R.id.record);
 		text_record = (TextView) findViewById(R.id.text_record);
+		mMyHorizontalScrollView=(MyHorizontalScrollView) findViewById(R.id.mMyHorizontalScrollView);
 		head_portrait = (ImageView) findViewById(R.id.head_portrait);
 		signature = (TextView) findViewById(R.id.signature);
 		message = (RadioButton) findViewById(R.id.message);
 		signature.setOnClickListener(clickListener);
 		record.setOnClickListener(clickListener);
 		text_record.setOnClickListener(clickListener);
-		head_portrait.setOnClickListener(clickListener);
-		radioGroup.setOnCheckedChangeListener(checkedChangeListener);
+		head_portrait.setOnClickListener(clickListener);		
 	};
 
 	OnClickListener clickListener = new OnClickListener() {
@@ -84,6 +86,9 @@ public class MainActivity2 extends FragmentActivity {
 				Intent intent2 = new Intent(MainActivity2.this,
 						LuZhiLingShengActivity.class);
 				startActivity(intent2);
+				break;
+			case R.id.personage:
+				mMyHorizontalScrollView.openSroll();
 				break;
 			default:
 				break;
