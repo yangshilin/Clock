@@ -10,6 +10,7 @@ import android.widget.BaseAdapter;
 import android.widget.TextView;
 
 import com.example.alarmclok.view.FindSetgetLuyin;
+import com.example.clock.R;
 
 
 public class MyAdapterFindLuyin extends BaseAdapter{
