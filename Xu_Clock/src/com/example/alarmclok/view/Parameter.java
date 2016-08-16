@@ -2,7 +2,7 @@ package com.example.alarmclok.view;
 
 public class Parameter {
 	/**
-	 *定义类型
+	 *瀹氫箟绫诲瀷
 	 */
 	int playmusic;
 	String title;
@@ -15,7 +15,7 @@ public class Parameter {
 	String commentQuantity;
 	int download;
 	/**
-	 * set,get方法获得对象
+	 * set,get鏂规硶鑾峰緱瀵硅薄
 	 * @return
 	 */
 	public int getPlaymusic() {

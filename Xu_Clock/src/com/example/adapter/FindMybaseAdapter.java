@@ -14,6 +14,7 @@ import android.widget.TextView;
 
 import com.example.alarmclok.view.Parameter;
 
+<<<<<<< HEAD:Xu_Clock/src/com/example/adapter/Find_MybaseAdapter.java
 public class Find_MybaseAdapter extends BaseAdapter{	
 	Context context;//������
 	LayoutInflater inflater;//���������
@@ -23,10 +24,21 @@ public class Find_MybaseAdapter extends BaseAdapter{
 	
 	
 	public Find_MybaseAdapter(){//�޲ι�����
+=======
+public class FindMybaseAdapter extends BaseAdapter{	
+	Context context;//上下文
+	LayoutInflater inflater;//布局填充器
+	int item;
+	int[] id;//id数组
+	List<Parameter> list;//列表集合parameter封装类
+	
+	
+	public FindMybaseAdapter(){//无参构造器
+>>>>>>> c7a7a8c03148cf0b0423dc02de651c730ceb7e56:Xu_Clock/src/com/example/adapter/FindMybaseAdapter.java
 		super();
 	}
 	
-	public Find_MybaseAdapter(Context context,int item, int[] id, List<Parameter> list){
+	public FindMybaseAdapter(Context context,int item, int[] id, List<Parameter> list){
 		super();
 		this.context = context;
 		this.item = item;

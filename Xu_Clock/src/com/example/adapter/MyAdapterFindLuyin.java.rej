@@ -1,0 +1,10 @@
+diff a/Xu_Clock/src/com/example/adapter/MyAdapterFindLuyin.java b/Xu_Clock/src/com/example/adapter/MyAdapterFindLuyin.java	(rejected hunks)
+@@ -10,7 +10,7 @@
+ import android.widget.TextView;
+ 
+ import com.example.alarmclok.view.FindSetgetLuyin;
+-import com.example.clock.R;
++
+ 
+ public class MyAdapterFindLuyin extends BaseAdapter{
+ 	LayoutInflater inflater;//���������

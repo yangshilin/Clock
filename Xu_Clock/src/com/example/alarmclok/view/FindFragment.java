@@ -33,66 +33,85 @@ import com.example.clock.R;
 
 public class FindFragment extends Fragment {
 
-	ImageButton imageButton1;//�������İ�ť
-	ImageButton imageButton2;//������Ϣ��ť
-	ViewFlipper lunbo;//��涯��
-	GestureDetector huadong;//��ͼ������������Ƽ������
-	LayoutInflater innflater;
-	LinearLayout linearlayout;
-	//Judge_Linyin jl;
-	//View vw;//������Ҫ�����������ͼ���˴���������ʾlistview����
+	ImageButton But_zhongxin;//个人中心按钮
+	ImageButton But_xinxi;//增加信息按钮
+	/**
+	 * 广告动画
+	 */
+	ViewFlipper lunbo;//广告动画
+	GestureDetector huadong;//视图点击滑动【手势检测器】
+	//LayoutInflater innflater;
+	//LinearLayout linearlayout;
+	/**
+	 * 头视图
+	 */
+	 View header;
+	/**
+	 * 添加数据
+	 */
 	RadioGroup radiogroup;
-	//RadioButton naozhong;
-	//RadioButton luyin;
-	
-	ListView listview1;
-	ListView listview2;
-	RadioButton radioBtn1;
-	RadioButton radioBtn2;
+	ListView listNaozhong;
+	ListView listLuyin;
+	RadioButton BtnNaozhong;
+	RadioButton BtnLuyin;
 	List<FindSetgetNaozhong> lists1;
 	List<FindSetgetLuyin> lists2;
 	FindSetgetNaozhong fs1;
 	FindSetgetLuyin fs2;
-	MyAdapterFindNaozhong adapter;
-	MyAdapterFindLuyin adapter2;
+	
 	public View onCreateView(LayoutInflater inflater, ViewGroup container,
 			Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
-		View view= inflater.inflate(R.layout.activity_find_1,container,false);//��ͼ���벼��
-		//imageButton1=(ImageButton)view.findViewById(R.id.find_gerenzhongxin);//���������View�����ҿؼ�id
-		//imageButton2=(ImageButton)view.findViewById(R.id.find_tianjia);
+		View view= inflater.inflate(R.layout.activity_find,container,false);//视图传入布局
 		/**
-		 *ViewFlipping��������
+		 * 头视图
 		 */
-		lunbo =(ViewFlipper)view.findViewById(R.id.find_view_flipper);//��涯��
-		lunbo.startFlipping();//��ʼ�ֲ�
-		huadong=new GestureDetector(listener);//���Ƽ���������ע�⣬����6������
-
-		listview1 = (ListView)view.findViewById(R.id.find_listview_1);
-		listview2 = (ListView)view.findViewById(R.id.find_listview_2);
-		radiogroup =(RadioGroup)view.findViewById(R.id.find_radiogroup);
-		radioBtn1 = (RadioButton)view.findViewById(R.id.find_radiobutton_naozhong);
-		radioBtn2 = (RadioButton)view.findViewById(R.id.find_radiobutton_luyin);
+		header = LayoutInflater.from(getActivity()).inflate(
+				R.layout.activity_find_headview,null);
+		
+	
+	
+		/**
+		 * 数据添加listview数据
+		 */
+		listNaozhong = (ListView)view.findViewById(R.id.find_listview_1);
+		listNaozhong.addHeaderView(header);//listview添加头视图
+		listLuyin = (ListView)view.findViewById(R.id.find_listview_2);
+		listLuyin.addHeaderView(header);//切换之后的listview一样添加头视图
+		//【Fragment里调用/布局本该应用view[.点]头视图内的则用头视图.点 ——只要是头视图里面的控件都得更改】 
+		
+		BtnNaozhong = (RadioButton)header.findViewById(R.id.find_radiobutton_naozhong);
+		BtnLuyin = (RadioButton)header.findViewById(R.id.find_radiobutton_luyin);
+		radiogroup =(RadioGroup)header.findViewById(R.id.find_radiogroup);
 		radiogroup.setOnCheckedChangeListener(onCheckedChangeListener);
+	
+		/**
+		 *ViewFlipping动画播放
+		 */
+		lunbo =(ViewFlipper)header.findViewById(R.id.find_view_flipper);//广告动画  【Fragment里调用/布局本该应用view[.点]头视图内的则用头视图.点】 
+		lunbo.startFlipping();//开始轮播
+		huadong=new GestureDetector(listener);//手势监听倒包需注意，共有6个方法
+		
 		getDate();	
+		
 		return view;
 	}
 	/**
-	 * �������listview����
+	 * 数据添加listview数据
 	 */
 	public void getDate() {
 		// TODO Auto-generated method stub
 		lists1=new ArrayList<FindSetgetNaozhong>();
 		FindSetgetNaozhong  fs1 = new FindSetgetNaozhong();
-		fs1.setTitle("��Ա");
-		fs1.setTime("6/23");
-		fs1.setUserQuantity("32");
+		fs1.setTitle("演员");
+		fs1.setTime("7/3");
+		fs1.setUserQuantity("232");
 		fs1.setPraiseQuantity("65");
 		fs1.setCommentQuantity("21");
 		lists1.add(fs1);
 		
 		 fs1 = new FindSetgetNaozhong();
-			fs1.setTitle("�Է�˯���򶹶�");
+			fs1.setTitle("吃饭睡觉打豆豆");
 			fs1.setTime("6/25");
 			fs1.setUserQuantity("42");
 			fs1.setPraiseQuantity("65");
@@ -100,7 +119,7 @@ public class FindFragment extends Fragment {
 			lists1.add(fs1);
 			
 		fs1 = new FindSetgetNaozhong();
-			fs1.setTitle("�ҵ�δ��������");
+			fs1.setTitle("我的未来不是梦");
 			fs1.setTime("6/30");
 			fs1.setUserQuantity("82");
 			fs1.setPraiseQuantity("61");
@@ -108,7 +127,7 @@ public class FindFragment extends Fragment {
 			lists1.add(fs1);
 			
 			fs1 = new FindSetgetNaozhong();
-			fs1.setTitle("ʮ��");
+			fs1.setTitle("十年");
 			fs1.setTime("6/30");
 			fs1.setUserQuantity("51");
 			fs1.setPraiseQuantity("15");
@@ -116,7 +135,7 @@ public class FindFragment extends Fragment {
 			lists1.add(fs1);
 			
 			fs1 = new FindSetgetNaozhong();
-			fs1.setTitle("����");
+			fs1.setTitle("后来");
 			fs1.setTime("6/30");
 			fs1.setUserQuantity("54");
 			fs1.setPraiseQuantity("12");
@@ -124,24 +143,80 @@ public class FindFragment extends Fragment {
 			lists1.add(fs1);
 			
 			fs1 = new FindSetgetNaozhong();
-			fs1.setTitle("��Լ�");
+			fs1.setTitle("最爱自己");
 			fs1.setTime("7/2");
 			fs1.setUserQuantity("541");
 			fs1.setPraiseQuantity("61");
 			fs1.setCommentQuantity("31");
 			lists1.add(fs1);
 
+			fs1 = new FindSetgetNaozhong();
+			fs1.setTitle("今夜20岁");
+			fs1.setTime("6/30");
+			fs1.setUserQuantity("54");
+			fs1.setPraiseQuantity("12");
+			fs1.setCommentQuantity("31");
+			lists1.add(fs1);
+			
+			fs1 = new FindSetgetNaozhong();
+			fs1.setTitle("那一天");
+			fs1.setTime("7/2");
+			fs1.setUserQuantity("541");
+			fs1.setPraiseQuantity("61");
+			fs1.setCommentQuantity("31");
+			lists1.add(fs1);
+
+			fs1 = new FindSetgetNaozhong();
+			fs1.setTitle("今夜20岁");
+			fs1.setTime("7/2");
+			fs1.setUserQuantity("541");
+			fs1.setPraiseQuantity("61");
+			fs1.setCommentQuantity("31");
+			lists1.add(fs1);
+			
+			fs1 = new FindSetgetNaozhong();
+			fs1.setTitle("说不出口");
+			fs1.setTime("7/2");
+			fs1.setUserQuantity("541");
+			fs1.setPraiseQuantity("61");
+			fs1.setCommentQuantity("31");
+			lists1.add(fs1);
+			
+			fs1 = new FindSetgetNaozhong();
+			fs1.setTitle("寂寞可以");
+			fs1.setTime("7/2");
+			fs1.setUserQuantity("541");
+			fs1.setPraiseQuantity("61");
+			fs1.setCommentQuantity("31");
+			lists1.add(fs1);
+			
+			fs1 = new FindSetgetNaozhong();
+			fs1.setTitle("说不出口");
+			fs1.setTime("7/2");
+			fs1.setUserQuantity("541");
+			fs1.setPraiseQuantity("61");
+			fs1.setCommentQuantity("31");
+			lists1.add(fs1);
+			
+			fs1 = new FindSetgetNaozhong();
+			fs1.setTitle("生活不止眼前的苟且");
+			fs1.setTime("7/2");
+			fs1.setUserQuantity("541");
+			fs1.setPraiseQuantity("61");
+			fs1.setCommentQuantity("31");
+			lists1.add(fs1);
+			
 			MyAdapterFindNaozhong myAdapter1 = new MyAdapterFindNaozhong(getActivity(),
-					R.layout.activity_find_1_1, lists1);
-			listview1.setAdapter(myAdapter1);
-			listview1.setOnItemClickListener(onItemClickListener);
+					R.layout.activity_find_download, lists1);
+			listNaozhong.setAdapter(myAdapter1);
+			listNaozhong.setOnItemClickListener(onItemClickListener);
 }
 	private void getDate2() {
 		// TODO Auto-generated method stub	
 		lists2=new ArrayList<FindSetgetLuyin>();
-		for (int i = 0; i < 5; i++) {
+		for (int i = 0; i < 6; i++) {
 		FindSetgetLuyin  fs2 = new FindSetgetLuyin();
-		fs2.setTitle("˯����");
+		fs2.setTitle("睡觉觉");
 		fs2.setTime("6/23");
 		fs2.setUserQuantity("32");
 		fs2.setPraiseQuantity("65");
@@ -149,7 +224,7 @@ public class FindFragment extends Fragment {
 		lists2.add(fs2);
 		
 		 fs2 = new FindSetgetLuyin();
-			fs2.setTitle("ʹ��");
+			fs2.setTitle("痛苦");
 			fs2.setTime("6/25");
 			fs2.setUserQuantity("42");
 			fs2.setPraiseQuantity("65");
@@ -157,9 +232,9 @@ public class FindFragment extends Fragment {
 			lists2.add(fs2);
 	}
 		MyAdapterFindLuyin myAdapter2 = new MyAdapterFindLuyin(getActivity(),
-				R.layout.activity_find_1_2, lists2);
-		listview1.setAdapter(myAdapter2);
-		listview1.setOnItemClickListener(onItemClickListener);
+				R.layout.activity_find_luyin, lists2);
+		listNaozhong.setAdapter(myAdapter2);
+		listNaozhong.setOnItemClickListener(onItemClickListener);
 }
 	OnItemClickListener onItemClickListener = new OnItemClickListener(){
 
@@ -167,33 +242,39 @@ public class FindFragment extends Fragment {
 		public void onItemClick(AdapterView<?> parent, View view, int position,
 				long id) {
 			// TODO Auto-generated method stub
-			Toast.makeText(getActivity(), "����ĵ�" + position + "��",
+			Toast.makeText(getActivity(), "点击的第" + position + "列",
 					Toast.LENGTH_SHORT).show();
 
 		}
 		
 	};
 	
-	//Radiogroup����
+	//Radiogroup监听
 	OnCheckedChangeListener onCheckedChangeListener = new OnCheckedChangeListener(){
-
+	
+		@SuppressWarnings("deprecation")
+		@SuppressLint("NewApi")
 		@Override
 		public void onCheckedChanged(RadioGroup group, int checkedId) {
 			// TODO Auto-generated method stub
 			switch (checkedId) {
 			case R.id.find_radiobutton_naozhong:
-				radioBtn1.setBackgroundDrawable(getResources().getDrawable(
+				BtnNaozhong.setBackgroundDrawable(getResources().getDrawable(
 						R.drawable.lingyixuanxiang_naoling));
-				radioBtn2.setBackgroundDrawable(getResources().getDrawable(
+				BtnLuyin.setBackgroundDrawable(getResources().getDrawable(
 						R.drawable.lingyixuanxiang_luyin_null));
 				 getDate();
+				 listNaozhong.setVisibility(listNaozhong.VISIBLE);
+				 listLuyin.setVisibility(listLuyin.GONE);
 				break;
 			case R.id.find_radiobutton_luyin:
-				radioBtn1.setBackgroundDrawable(getResources().getDrawable(
+				BtnNaozhong.setBackgroundDrawable(getResources().getDrawable(
 						R.drawable.lingyixuanxiang_naoling_null));
-				radioBtn2.setBackgroundDrawable(getResources().getDrawable(
+				BtnLuyin.setBackgroundDrawable(getResources().getDrawable(
 						R.drawable.lingyixuanxiang_luyin));
 				 getDate2();
+				 listLuyin.setVisibility(listNaozhong.VISIBLE);//切换头视图的方法
+				 listLuyin.setVisibility(listLuyin.GONE);
 				break;
 			default:
 				break;
@@ -207,15 +288,18 @@ public class FindFragment extends Fragment {
 		return null;
 	}
 
-	
+	/**
+	 * 广告轮播控制
+	 * @return
+	 */
 	public boolean OnTouchEvent(MotionEvent exent){
 		return huadong.onTouchEvent(exent);
 		
 	}
-	//���Ƶ������
+	//手势点击监听
 	OnGestureListener listener =new OnGestureListener(){
 		/**
-		 * ����δ�뿪
+		 * 按下未离开
 		 */
 		@Override
 		public boolean onDown(MotionEvent e) {
@@ -223,7 +307,7 @@ public class FindFragment extends Fragment {
 			return false;
 		}
 		/**
-		 * �����δ�ƶ���̧��
+		 * 点击还未移动或抬起
 		 */
 		@Override
 		public void onShowPress(MotionEvent e) {
@@ -231,7 +315,7 @@ public class FindFragment extends Fragment {
 			
 		}
 		/**
-		 * һ�ε���¼�
+		 * 一次点击事件
 		 */
 		@Override
 		public boolean onSingleTapUp(MotionEvent e) {
@@ -241,7 +325,7 @@ public class FindFragment extends Fragment {
 			return false;
 		}
 		/**
-		 * ��Ļ�϶��¼�
+		 * 屏幕拖动事件
 		 */
 		@Override
 		public boolean onScroll(MotionEvent e1, MotionEvent e2,
@@ -250,7 +334,7 @@ public class FindFragment extends Fragment {
 			return false;
 		}
 		/**
-		 * ����
+		 * 长按
 		 */
 		@Override
 		public void onLongPress(MotionEvent e) {
@@ -258,7 +342,7 @@ public class FindFragment extends Fragment {
 			
 		}
 		/**
-		 * ��������
+		 * 滑动手势
 		 */
 		@SuppressLint("NewApi")
 		@Override
@@ -273,7 +357,7 @@ public class FindFragment extends Fragment {
 			Log.i("e2", "e2" + e2);
 			Log.i("MotionEvent", "MotionEvent" + e2.getX());
 			Log.i("MotionEvent", "MotionEvent" + e2.getY());
-			if(e1.getX()-e2.getX()>20){//�ж���ͼ�ֲ���ֱ�ӵ���Ƿ�������ת�����������ֱ����ת
+			if(e1.getX()-e2.getX()>20){//判断视图轮播器直接点击是否正在跳转，点击滑动可直接跳转ת
 				lunbo.showNext();
 			}else if (e2.getX() - e1.getX() >20){
 				lunbo.showPrevious();

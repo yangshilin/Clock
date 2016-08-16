@@ -14,6 +14,11 @@ import android.graphics.Point;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.text.format.DateFormat;
+import android.text.format.Time;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
@@ -31,6 +36,7 @@ public class ClockRing extends View {
 	String doing = "稍息立正起床！";
 	String alarm_time = "07:30";
 	boolean open;
+	boolean isRunning;
 
 	public ClockListener getClockListener() {
 		return clockListener;
@@ -93,6 +99,10 @@ public class ClockRing extends View {
 	protected void onDraw(Canvas canvas) {
 		// TODO Auto-generated method stub
 		super.onDraw(canvas);
+		if (!isRunning) {
+			refreshTime();
+			isRunning = true;
+		}
 		Paint paint = new Paint();
 		paint.setColor(getResources().getColor(android.R.color.white));
 		paint.setStyle(Paint.Style.STROKE);
@@ -170,6 +180,77 @@ public class ClockRing extends View {
 			bitmap_on.recycle();
 		}
 	}
+
+	public void refreshTime() {
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				Time times = new Time("GMT-8");
+				
+				/*
+				 * 对于已经设定为GMT时间标准的dateFormat来说，一切需要他转换的字符串日期都是GMT标准时间，转换后返回的Date由于默认
+				 * 遵守系统默认时区，所以转换给Date的日期需要+8（例如北京标准时区），也就是时区与标准不同导致的时差。
+				 */
+
+				try {
+					while (true) {
+						times.setToNow();
+						int year = times.year;
+						int month = times.month+1;
+						int day = times.monthDay;
+						int minute = times.minute;
+						int hour = times.hour+8;
+						int week=times.weekDay;
+						int sec = times.second;
+						if (sec%10==0) {
+							Log.i("time", "当前时间为：" + year + "年 " + month + "月 "
+									+ day + "日 " + hour + "时 " + minute + "分 "
+									+ sec + "秒" + "time" + "week"+week);
+							date = String.valueOf(month) + "/"
+									+ String.valueOf(day);
+							if(minute>9){
+							time = String.valueOf(hour) + ":"
+									+ String.valueOf(minute);
+							}
+							else{
+								time=String.valueOf(hour) + ":"
+										+ "0"+String.valueOf(minute);
+							}
+							Message msg = new Message();
+							msg.what = 1001;
+							handler.sendMessage(msg);
+							Thread.sleep(1000);//
+							//
+						}
+					}
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+			}
+		}).start();
+
+	}
+
+	Handler handler = new Handler() {
+		public void handleMessage(Message msg) {
+			switch (msg.what) {
+			case 1001:
+
+				invalidate();
+				break;
+			case 1002:
+
+				break;
+
+			default:
+				break;
+			}
+		}
+	};
 
 	public int getDifficult() {
 		return difficult;
