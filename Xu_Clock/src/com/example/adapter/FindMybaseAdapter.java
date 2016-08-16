@@ -21,12 +21,12 @@ public class FindMybaseAdapter extends BaseAdapter {
 	int[] id;// id数组
 	List<Parameter> list;// 列表集合parameter封装类
 
-	public FindMybaseAdapter() {
-		// 无参构造器
+	public FindMybaseAdapter() {// 无参构造器
 	}
 
 	public FindMybaseAdapter(Context context, int item, int[] id,
 			List<Parameter> list) {
+		super();
 		this.context = context;
 		this.item = item;
 		this.id = id;
