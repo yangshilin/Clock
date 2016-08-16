@@ -20,9 +20,7 @@ import android.widget.TextView;
 import android.widget.TimePicker;
 
 public class BianJiNaoZhongActivity extends Activity{
-		
 	TextView timebtn;// 铃声文本
-	
 	ImageButton returnbtn;//返回
 	ImageButton completebtn;//完成
 	RelativeLayout selectbtn;//选择

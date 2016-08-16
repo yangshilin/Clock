@@ -2,7 +2,6 @@ package com.xuguoli.activity;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.zip.Inflater;
 
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
