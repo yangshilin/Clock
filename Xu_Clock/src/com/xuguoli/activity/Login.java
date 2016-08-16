@@ -61,6 +61,10 @@ public class Login extends Activity implements OnClickListener {
 		case R.id.return_not:
 			startActivity(new Intent(Login.this,Logon.class));
 			break;
+			
+		case R.id.bt_login:
+			startActivity(new Intent(Login.this,Logon.class));
+			break;
 		}
 	}
  

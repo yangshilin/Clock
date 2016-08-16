@@ -36,6 +36,10 @@ public class MainActivity2 extends FragmentActivity {
 	RadioButton ring;
 	RadioButton message;
 	ImageView head_portrait;
+	Clock_Fragment clock_Fragment = new Clock_Fragment();
+	Message_Fragment message_Fragment = new Message_Fragment();
+	Circle circle = new Circle();
+	FindFragment FindFragment = new FindFragment();
 	TextView signature;
 	ImageView record;
 	TextView text_record;
@@ -54,14 +58,14 @@ public class MainActivity2 extends FragmentActivity {
 		ring = (RadioButton) findViewById(R.id.ring);
 		record = (ImageView) findViewById(R.id.record);
 		text_record = (TextView) findViewById(R.id.text_record);
-		mMyHorizontalScrollView=(MyHorizontalScrollView) findViewById(R.id.mMyHorizontalScrollView);
+		mMyHorizontalScrollView = (MyHorizontalScrollView) findViewById(R.id.mMyHorizontalScrollView);
 		head_portrait = (ImageView) findViewById(R.id.head_portrait);
 		signature = (TextView) findViewById(R.id.signature);
 		message = (RadioButton) findViewById(R.id.message);
 		signature.setOnClickListener(clickListener);
 		record.setOnClickListener(clickListener);
 		text_record.setOnClickListener(clickListener);
-		head_portrait.setOnClickListener(clickListener);		
+		head_portrait.setOnClickListener(clickListener);
 	};
 
 	OnClickListener clickListener = new OnClickListener() {
@@ -185,12 +189,6 @@ public class MainActivity2 extends FragmentActivity {
 		// TODO Auto-generated method stub
 		FragmentManager fm = getSupportFragmentManager();
 		FragmentTransaction ft = fm.beginTransaction();
-		Clock_Fragment clock_Fragment = new Clock_Fragment();
-		Message_Fragment message_Fragment = new Message_Fragment();
-		Circle circle = new Circle();
-
-		FindFragment FindFragment = new FindFragment();
-
 		switch (R_id) {
 		case R.id.clock:
 			ft.replace(R.id.linearlayout, clock_Fragment);
