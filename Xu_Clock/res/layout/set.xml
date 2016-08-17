@@ -58,11 +58,12 @@
         <TextView
             android:id="@+id/setname"
             android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_height="match_parent"
             android:layout_centerVertical="true"
             android:layout_marginLeft="14dp"
             android:layout_toRightOf="@+id/imagemine_two"
             android:text="夏是夏天的夏_"
+            android:gravity="center_vertical"
             android:textColor="#000000"
             android:textSize="14sp" />
 
@@ -156,15 +157,18 @@
             android:layout_marginLeft="15dp"
             android:text="免打扰时段：20:00-08:00" />
 
-        <ImageButton
+        <CheckBox
             android:id="@+id/imageButton4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:padding="10dp"
-            android:background="@null"
-            android:src="@drawable/set_setector" />
+            android:text=""
+            android:checked="false"
+            android:button="@null"
+            android:drawableLeft="@drawable/set_setector"
+            />
     </RelativeLayout>
 
     <View
@@ -188,15 +192,17 @@
             android:textColor="#414141"
             android:textSize="17sp" />
 
-        <ImageButton
+        <CheckBox
             android:id="@+id/imageButton5"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
             android:padding="10dp"
-            android:background="@null"
-            android:src="@drawable/set_setector" />
+            android:text=""
+            android:checked="false"
+            android:button="@null"
+            android:drawableLeft="@drawable/set_setector" />
 
     </RelativeLayout>
 
