@@ -12,7 +12,7 @@
         android:layout_height="100dp"
         android:background="@null"
         android:flipInterval="4000" >
-
+	
         <!-- android:flipInterval="4000" 轮播时停留的事件 毫秒为单位 -->
 
         <ImageButton
@@ -20,28 +20,32 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
              android:background="@null"
+             android:scaleType="centerCrop"
             android:src="@drawable/find_donghua_imageview2" />
-
+ <!-- android:scaleType="centerCrop" 图片 居中放大 铺满-->
         <ImageButton
             android:id="@+id/cartoon_2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
              android:background="@null"
-            android:src="@drawable/find_donghua_imageview1" />
+            android:src="@drawable/find_donghua_imageview1"
+            android:scaleType="centerCrop" />
 
         <ImageButton
             android:id="@+id/cartoon_3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
              android:background="@null"
-            android:src="@drawable/find_donghua_imageview3" />
+            android:src="@drawable/find_donghua_imageview3"
+            android:scaleType="centerCrop" />
 
         <ImageButton
             android:id="@+id/cartoon_4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
              android:background="@null"
-            android:src="@drawable/find_donghua_imageview4" />
+            android:src="@drawable/find_donghua_imageview4" 
+            android:scaleType="centerCrop"/>
     </ViewFlipper>
 
     <RadioGroup
