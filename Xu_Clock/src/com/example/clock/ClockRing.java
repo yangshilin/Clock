@@ -1,5 +1,8 @@
 package com.example.clock;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.example.alarmclock.BianJiNaoZhongActivity;
 
 import android.annotation.SuppressLint;
@@ -14,23 +17,30 @@ import android.graphics.Point;
 import android.graphics.Rect;
 import android.graphics.RectF;
 import android.graphics.drawable.Drawable;
+import android.os.Bundle;
+import android.os.Handler;
+import android.os.Message;
+import android.text.format.DateFormat;
+import android.text.format.Time;
 import android.util.AttributeSet;
 import android.util.Log;
 import android.view.MotionEvent;
 import android.view.View;
 
 public class ClockRing extends View {
-	private String time = "12:00";
-	private String date = "06/25";
-	private String week = "周六";
-	private String wendu = "30";
-	private String temp = wendu + "℃";
-	int bitm = R.drawable.weather;
-	int difficult = 1;
-	String diffi = "难度：";
-	String doing = "稍息立正起床！";
-	String alarm_time = "07:30";
-	boolean open;
+	private static String time = "12:00";
+	private static String date = "06/25";
+	private static String week = "周六";
+	private static String wendu = "30";
+	private static String temp = wendu + "℃";
+	static int bitm = R.drawable.weather;
+	static int difficult = 1;
+	static String diffi = "难度：";
+	static String doing = "稍息立正起床！";
+	static String alarm_time = "07:30";
+	 static boolean open;
+	boolean isRunning;
+	Map<Integer, String> weekMap=new HashMap<Integer, String>();
 
 	public ClockListener getClockListener() {
 		return clockListener;
@@ -78,7 +88,6 @@ public class ClockRing extends View {
 				if (clockListener != null) {
 					clockListener.click();
 				}
-
 			}
 			break;
 
@@ -92,6 +101,10 @@ public class ClockRing extends View {
 	protected void onDraw(Canvas canvas) {
 		// TODO Auto-generated method stub
 		super.onDraw(canvas);
+		if (!isRunning) {
+			refreshTime();
+			isRunning = true;
+		}
 		Paint paint = new Paint();
 		paint.setColor(getResources().getColor(android.R.color.white));
 		paint.setStyle(Paint.Style.STROKE);
@@ -169,6 +182,71 @@ public class ClockRing extends View {
 			bitmap_on.recycle();
 		}
 	}
+
+	public void refreshTime() {
+		new Thread(new Runnable() {
+
+			@Override
+			public void run() {
+				// TODO Auto-generated method stub
+				Time times = new Time("GMT-8");
+
+				/*
+				 * 对于已经设定为GMT时间标准的dateFormat来说，一切需要他转换的字符串日期都是GMT标准时间，转换后返回的Date由于默认
+				 * 遵守系统默认时区，所以转换给Date的日期需要+8（例如北京标准时区），也就是时区与标准不同导致的时差。
+				 */
+
+				try {
+					while (true) {
+						times.setToNow();
+						int year = times.year;
+						int month = times.month + 1;
+						int day = times.monthDay;
+						int minute = times.minute;
+						int hour = times.hour + 8;
+						int week = times.weekDay;
+						int sec = times.second;
+						date = String.valueOf(month) + "/"
+								+ String.valueOf(day);
+						if (minute > 9) {
+							time = String.valueOf(hour) + ":"
+									+ String.valueOf(minute);
+						} else {
+							time = String.valueOf(hour) + ":" + "0"
+									+ String.valueOf(minute);
+						}
+						Message msg = new Message();
+						msg.what = 1001;
+						handler.sendMessage(msg);
+						Thread.sleep(1000);//
+						//
+					}
+				} catch (InterruptedException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+
+			}
+		}).start();
+
+	}
+
+	Handler handler = new Handler() {
+		public void handleMessage(Message msg) {
+			switch (msg.what) {
+			case 1001:
+
+				invalidate();
+				break;
+			case 1002:
+
+				break;
+
+			default:
+				break;
+			}
+		}
+	};
 
 	public int getDifficult() {
 		return difficult;

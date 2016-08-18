@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#90000000" >
+<!-- android:background="#90[前面2位是透明值]000000[后面6位是颜色]" -->
+
+        <ImageButton
+            android:id="@+id/task_fanhui_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="5dp"
+            android:background="@null"
+            android:padding="10dp"
+            android:src="@drawable/return_not" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="任务"
+            android:textColor="@color/gainsboro"
+            android:textSize="20sp" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#60000000" >
+<!-- android:background="#60[前面2位是透明值]000000[后面6位是颜色]" -->
+
+        <ListView
+            android:id="@+id/task.listview"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:cacheColorHint="@null"
+            android:divider="@null"
+            android:dividerHeight="20dp"
+            android:scrollbars="none" />
+        <!-- android:divider="1dp" 行间颜色 -->
+        <!-- android:dividerHeight="10dp" 行间距离，【没运行或是没加行间颜色看不出效果】 -->
+        <!-- android:numColumns="2" 列数 2列 -->
+        <!-- android:scrollbars="none" 滚动条无样式 ，不改变颜色 -->
+    </RelativeLayout>
+
+</LinearLayout>

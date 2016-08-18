@@ -1,4 +1,4 @@
-package fragment;
+package com.example.fragment;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -25,23 +25,25 @@ public class Message_Fragment extends Fragment {
 		// TODO Auto-generated method stub
 		View v = new View(getActivity());
 		v = inflater.inflate(R.layout.activity_message, container, false);
-		mMyHorizontalScrollView=(MyHorizontalScrollView) v.findViewById(R.id.mMyHorizontalScrollView);
+		View shouyeView=inflater.inflate(R.layout.activity_shouye, null,false);
+		mMyHorizontalScrollView=(MyHorizontalScrollView) getActivity().findViewById(R.id.mMyHorizontalScrollView);
 		personage = (ImageView) v.findViewById(R.id.personage);
-		personage.setOnClickListener(new OnClickListener() {
-			@Override
-			public void onClick(View v) {
-				// TODO Auto-generated method stub
-				switch (v.getId()) {
-				case R.id.personage:
-					mMyHorizontalScrollView.openSroll();
-					break;
-
-				default:
-					break;
-				}
-			}
-		});
+		personage.setOnClickListener(clickListener); 
 		return v;
 	}
+OnClickListener clickListener=new OnClickListener() {
+	
+	@Override
+	public void onClick(View v) {
+		// TODO Auto-generated method stub
+		switch (v.getId()) {
+		case R.id.personage:
+			mMyHorizontalScrollView.openSroll();
+			break;
 
+		default:
+			break;
+		}
+	}
+};
 }

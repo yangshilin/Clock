@@ -4,11 +4,11 @@ import com.example.alarmclock.LuZhiLingShengActivity;
 import com.example.alarmclok.view.FindFragment;
 import com.example.clock.ClockRing.ClockListener;
 import com.example.clock.menu.view.MyHorizontalScrollView;
-import com.xuguoli.activity.Circle;
-import com.xuguoli.activity.Set;
+import com.example.fragment.Clock_Fragment;
+import com.example.fragment.Message_Fragment;
+import com.example.xuguoliactivity.Circle;
+import com.example.xuguoliactivity.Set;
 
-import fragment.Clock_Fragment;
-import fragment.Message_Fragment;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -16,7 +16,9 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
+import android.text.format.Time;
 import android.text.style.ClickableSpan;
+import android.util.Log;
 import android.view.View.OnClickListener;
 import android.view.View;
 import android.view.Window;
@@ -27,16 +29,21 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TextView;
 
 public class MainActivity2 extends FragmentActivity {
-	
+
 	RadioGroup radioGroup;
 	RadioButton clock;
 	RadioButton found;
 	RadioButton ring;
 	RadioButton message;
 	ImageView head_portrait;
+	Clock_Fragment clock_Fragment = new Clock_Fragment();
+	Message_Fragment message_Fragment = new Message_Fragment();
+	Circle circle = new Circle();
+	FindFragment FindFragment = new FindFragment();
 	TextView signature;
 	ImageView record;
 	TextView text_record;
+	ImageView personage;
 	MyHorizontalScrollView mMyHorizontalScrollView;
 
 	protected void onCreate(Bundle arg0) {
@@ -45,23 +52,24 @@ public class MainActivity2 extends FragmentActivity {
 		setContentView(R.layout.activity_shouye);
 		setFragment(R.id.clock);
 		radioGroup = (RadioGroup) findViewById(R.id.radiogroup);
+		radioGroup.setOnCheckedChangeListener(checkedChangeListener);
 		clock = (RadioButton) findViewById(R.id.clock);
 		found = (RadioButton) findViewById(R.id.found);
 		ring = (RadioButton) findViewById(R.id.ring);
-		record=(ImageView) findViewById(R.id.record);
-		text_record=(TextView) findViewById(R.id.text_record);
-		head_portrait=(ImageView) findViewById(R.id.head_portrait);
-		signature=(TextView) findViewById(R.id.signature);
+		record = (ImageView) findViewById(R.id.record);
+		text_record = (TextView) findViewById(R.id.text_record);
+		mMyHorizontalScrollView = (MyHorizontalScrollView) findViewById(R.id.mMyHorizontalScrollView);
+		head_portrait = (ImageView) findViewById(R.id.head_portrait);
+		signature = (TextView) findViewById(R.id.signature);
 		message = (RadioButton) findViewById(R.id.message);
-		signature.setOnClickListener(clickListener);	
-		record.setOnClickListener(clickListener);	
-		text_record.setOnClickListener(clickListener);	
-		head_portrait.setOnClickListener(clickListener);	
-		radioGroup.setOnCheckedChangeListener(checkedChangeListener);
+		signature.setOnClickListener(clickListener);
+		record.setOnClickListener(clickListener);
+		text_record.setOnClickListener(clickListener);
+		head_portrait.setOnClickListener(clickListener);
 	};
-	
-	OnClickListener clickListener=new OnClickListener() {
-		
+
+	OnClickListener clickListener = new OnClickListener() {
+
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
@@ -70,22 +78,28 @@ public class MainActivity2 extends FragmentActivity {
 				signature.setText("��ʱ�������");
 				break;
 			case R.id.head_portrait:
-				Intent intent=new Intent(MainActivity2.this,Set.class);
+				Intent intent = new Intent(MainActivity2.this, Set.class);
 				startActivity(intent);
 				break;
 			case R.id.record:
-				Intent intent1=new Intent(MainActivity2.this,LuZhiLingShengActivity.class);
+				Intent intent1 = new Intent(MainActivity2.this,
+						LuZhiLingShengActivity.class);
 				startActivity(intent1);
 				break;
 			case R.id.text_record:
-				Intent intent2=new Intent(MainActivity2.this,LuZhiLingShengActivity.class);
+				Intent intent2 = new Intent(MainActivity2.this,
+						LuZhiLingShengActivity.class);
 				startActivity(intent2);
+				break;
+			case R.id.personage:
+				mMyHorizontalScrollView.openSroll();
 				break;
 			default:
 				break;
 			}
 		}
 	};
+
 	private void setchecked(int id) {
 		// TODO Auto-generated method stub
 		switch (id) {
@@ -99,6 +113,10 @@ public class MainActivity2 extends FragmentActivity {
 					.getDrawable(R.drawable.find), null, null);
 			ring.setCompoundDrawablesWithIntrinsicBounds(null, getResources()
 					.getDrawable(R.drawable.ring), null, null);
+			message.setTextColor(getResources().getColor(android.R.color.white));
+			clock.setTextColor(getResources().getColor(R.color.darkgray));
+			found.setTextColor(getResources().getColor(R.color.darkgray));
+			ring.setTextColor(getResources().getColor(R.color.darkgray));
 			break;
 		case R.id.clock:
 			message.setCompoundDrawablesWithIntrinsicBounds(null,
@@ -109,6 +127,10 @@ public class MainActivity2 extends FragmentActivity {
 					.getDrawable(R.drawable.find), null, null);
 			ring.setCompoundDrawablesWithIntrinsicBounds(null, getResources()
 					.getDrawable(R.drawable.ring), null, null);
+			message.setTextColor(getResources().getColor(R.color.darkgray));
+			clock.setTextColor(getResources().getColor(android.R.color.white));
+			found.setTextColor(getResources().getColor(R.color.darkgray));
+			ring.setTextColor(getResources().getColor(R.color.darkgray));
 			break;
 		case R.id.ring:
 			message.setCompoundDrawablesWithIntrinsicBounds(null,
@@ -119,6 +141,10 @@ public class MainActivity2 extends FragmentActivity {
 					.getDrawable(R.drawable.find), null, null);
 			ring.setCompoundDrawablesWithIntrinsicBounds(null, getResources()
 					.getDrawable(R.drawable.ring_not), null, null);
+			message.setTextColor(getResources().getColor(R.color.darkgray));
+			clock.setTextColor(getResources().getColor(R.color.darkgray));
+			found.setTextColor(getResources().getColor(R.color.darkgray));
+			ring.setTextColor(getResources().getColor(android.R.color.white));
 			break;
 		case R.id.found:
 			message.setCompoundDrawablesWithIntrinsicBounds(null,
@@ -129,6 +155,10 @@ public class MainActivity2 extends FragmentActivity {
 					.getDrawable(R.drawable.find_not), null, null);
 			ring.setCompoundDrawablesWithIntrinsicBounds(null, getResources()
 					.getDrawable(R.drawable.ring), null, null);
+			message.setTextColor(getResources().getColor(R.color.darkgray));
+			clock.setTextColor(getResources().getColor(R.color.darkgray));
+			found.setTextColor(getResources().getColor(android.R.color.white));
+			ring.setTextColor(getResources().getColor(R.color.darkgray));
 			break;
 
 		default:
@@ -159,10 +189,6 @@ public class MainActivity2 extends FragmentActivity {
 		// TODO Auto-generated method stub
 		FragmentManager fm = getSupportFragmentManager();
 		FragmentTransaction ft = fm.beginTransaction();
-		Clock_Fragment clock_Fragment = new Clock_Fragment();
-		Message_Fragment message_Fragment = new Message_Fragment();
-		Circle circle=new Circle();
-		FindFragment FindFragment=new FindFragment();
 		switch (R_id) {
 		case R.id.clock:
 			ft.replace(R.id.linearlayout, clock_Fragment);

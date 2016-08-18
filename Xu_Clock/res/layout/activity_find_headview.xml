@@ -3,44 +3,8 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical" >
-
-    <RelativeLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:alpha="0.6"
-        android:background="@color/darkblack" >
-
-        <ImageButton
-            android:id="@+id/find_gerenzhongxin"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="10dp"
-            android:background="@null"
-            android:padding="5dp"
-            android:src="@drawable/personage" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:text="发现"
-            android:textColor="@color/gainsboro"
-            android:textSize="22sp" />
-
-        <ImageButton
-            android:id="@+id/find_tianjia"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="10dp"
-            android:background="@null"
-            android:padding="5dp"
-            android:src="@drawable/addto" />
-    </RelativeLayout>
-
-    <!-- 广告栏【下面】图片轮播器 -->
+    
+	 <!-- 广告栏【下面】图片轮播器 -->
 
     <ViewFlipper
         android:id="@+id/find_view_flipper"
@@ -48,32 +12,40 @@
         android:layout_height="100dp"
         android:background="@null"
         android:flipInterval="4000" >
-
+	
         <!-- android:flipInterval="4000" 轮播时停留的事件 毫秒为单位 -->
 
         <ImageButton
             android:id="@+id/cartoon_1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+             android:background="@null"
+             android:scaleType="centerCrop"
             android:src="@drawable/find_donghua_imageview2" />
-
+ <!-- android:scaleType="centerCrop" 图片 居中放大 铺满-->
         <ImageButton
             android:id="@+id/cartoon_2"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/find_donghua_imageview1" />
+             android:background="@null"
+            android:src="@drawable/find_donghua_imageview1"
+            android:scaleType="centerCrop" />
 
         <ImageButton
             android:id="@+id/cartoon_3"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/find_donghua_imageview3" />
+             android:background="@null"
+            android:src="@drawable/find_donghua_imageview3"
+            android:scaleType="centerCrop" />
 
         <ImageButton
             android:id="@+id/cartoon_4"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:src="@drawable/find_donghua_imageview4" />
+             android:background="@null"
+            android:src="@drawable/find_donghua_imageview4" 
+            android:scaleType="centerCrop"/>
     </ViewFlipper>
 
     <RadioGroup
@@ -113,27 +85,5 @@
             android:textColor="@drawable/change_text_color"
             android:textSize="16sp" />
     </RadioGroup>
-
-    <ListView
-        android:id="@+id/find_listview_1"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:cacheColorHint="@null"
-        android:divider="@null"
-        android:dividerHeight="10dp"
-        android:scrollbars="none" />
-
-    <ListView
-        android:id="@+id/find_listview_2"
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:background="@null"
-        android:cacheColorHint="@null"
-        android:divider="@null"
-        android:dividerHeight="10dp"
-        android:scrollbars="none" >
-
-    </ListView>
-
+    
 </LinearLayout>

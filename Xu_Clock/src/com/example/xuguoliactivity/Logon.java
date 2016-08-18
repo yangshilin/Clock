@@ -1,4 +1,4 @@
-package com.xuguoli.activity;
+package com.example.xuguoliactivity;
 
 import android.app.Activity;
 import android.content.Intent;
@@ -57,7 +57,7 @@ public class Logon extends Activity implements OnClickListener {
 			startActivity(new Intent(Logon.this, MainActivity2.class));
 			break;
 		case R.id.btn_forgot:
-			startActivity(new Intent(Logon.this, Add.class));
+			startActivity(new Intent(Logon.this, ForgotPassword_activity.class));
 			break;
 		case R.id.btn_moreLogon:
 			startActivity(new Intent(Logon.this, Third_party.class));

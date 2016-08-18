@@ -23,7 +23,6 @@ public class LuZhiLingShengActivity extends Activity{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.luzhilingsheng);
-		
 		returnbtn=(ImageButton)findViewById(R.id.return_imagebtn);
 		recordingbtn=(ImageView)findViewById(R.id.recording_imagebtn);
 		linearLayout=(LinearLayout)findViewById(R.id.linearlayout_id);

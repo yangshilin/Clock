@@ -2,6 +2,11 @@ package com.example.adapter;
 
 import java.util.List;
 
+
+import com.example.alarmclok.view.FindSetgetLuyin;
+import com.example.clock.R;
+
+
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -12,19 +17,20 @@ import android.widget.TextView;
 import com.example.alarmclok.view.FindSetgetLuyin;
 import com.example.clock.R;
 
+
 public class MyAdapterFindLuyin extends BaseAdapter{
-	LayoutInflater inflater;//���������
-	Context context;//������
+	LayoutInflater inflater;//布局填充器
+	Context context;//上下文
 	List<FindSetgetLuyin> lists;
-	int id;
+	int resourceId;
 	
-	public MyAdapterFindLuyin(){//�Զ�����޲ι�����
+	public MyAdapterFindLuyin(){//自定义的无参构造器
 		
 	}
-	public MyAdapterFindLuyin(Context context, int id, List<FindSetgetLuyin> lists){
+	public MyAdapterFindLuyin(Context context, int resourceId, List<FindSetgetLuyin> lists){
 		this.lists = lists;
 		this.context = context;
-		this.id = id;
+		this.resourceId = resourceId;
 		inflater = LayoutInflater.from(context);
 	}
 	
@@ -52,7 +58,7 @@ public class MyAdapterFindLuyin extends BaseAdapter{
 	public View getView(int position, View convertView, ViewGroup parent) {
 		// TODO Auto-generated method stub
 		if(convertView == null){
-			convertView = inflater.inflate(id,null);
+			convertView = inflater.inflate(resourceId,null);
 		}
 		TextView title = (TextView) convertView.findViewById(R.id.find_music_title);
 		TextView time = (TextView) convertView.findViewById(R.id.find_music_riqi);
@@ -62,10 +68,10 @@ public class MyAdapterFindLuyin extends BaseAdapter{
 		
 		FindSetgetLuyin fs2 =lists.get(position);
 		
-	/*	imageView.setBackgroundDrawable(context.getResources().getDrawable(
-				products.getImgedt())); ����д��*/
+		/*	imageView.setBackgroundDrawable(context.getResources().getDrawable(
+		products.getImgedt())); 背景写法*/
 		title.setText(fs2.getTitle());
-		time.setText(fs2.getTitle());
+		time.setText(fs2.getTime());
 		userQuantity.setText(fs2.getUserQuantity());
 		praiseQuantity.setText(fs2.getPraiseQuantity());
 		commentQuantity.setText(fs2.getCommentQuantity());
