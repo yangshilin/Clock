@@ -14,6 +14,29 @@ import android.widget.TextView;
 
 import com.example.alarmclok.view.Parameter;
 
+<<<<<<< HEAD:Xu_Clock/src/com/example/adapter/Find_MybaseAdapter.java
+public class Find_MybaseAdapter extends BaseAdapter{	
+	Context context;//������
+	LayoutInflater inflater;//���������
+	int item;
+	int[] id;//id����
+	List<Parameter> list;//�б���parameter��װ��
+	
+	
+	public Find_MybaseAdapter(){//�޲ι�����
+=======
+public class FindMybaseAdapter extends BaseAdapter{	
+	Context context;//上下文
+	LayoutInflater inflater;//布局填充器
+	int item;
+	int[] id;//id数组
+	List<Parameter> list;//列表集合parameter封装类
+	
+	
+	public FindMybaseAdapter(){//无参构造器
+>>>>>>> c7a7a8c03148cf0b0423dc02de651c730ceb7e56:Xu_Clock/src/com/example/adapter/FindMybaseAdapter.java
+		super();
+=======
 public class FindMybaseAdapter extends BaseAdapter {
 	Context context;// 上下文
 	LayoutInflater inflater;// 布局填充器
@@ -22,7 +45,10 @@ public class FindMybaseAdapter extends BaseAdapter {
 	List<Parameter> list;// 列表集合parameter封装类
 
 	public FindMybaseAdapter() {// 无参构造器
+>>>>>>> origin/feature/ysl
 	}
+	
+	public FindMybaseAdapter(Context context,int item, int[] id, List<Parameter> list){
 
 	public FindMybaseAdapter(Context context, int item, int[] id,
 			List<Parameter> list) {
@@ -32,8 +58,11 @@ public class FindMybaseAdapter extends BaseAdapter {
 		this.id = id;
 		this.list = list;
 		inflater = LayoutInflater.from(context);
+		
 
 	}
+	
+	
 
 	@Override
 	public int getCount() {
@@ -83,7 +112,15 @@ public class FindMybaseAdapter extends BaseAdapter {
 		comment.setImageResource(parameter.getComment());
 		commentQuantity.setText(parameter.getCommentQuantity());
 		download.setBottom(parameter.getDownload());
-
+		
 		return convertView;
 	}
 }
+
+
+
+
+
+
+
+
