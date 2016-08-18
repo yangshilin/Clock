@@ -84,11 +84,6 @@
 
         <TextView
             android:id="@+id/pinglun_numb"
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-=======
->>>>>>> origin/feature/ysl
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
@@ -105,50 +100,19 @@
             android:layout_width="22dp"
             android:layout_height="22dp"
             android:layout_centerVertical="true"
-<<<<<<< HEAD
             android:layout_toLeftOf="@+id/pinglun_numb"
             android:src="@drawable/comment" />
 
         <TextView
             android:id="@+id/lvnumb"
->>>>>>> c7a7a8c03148cf0b0423dc02de651c730ceb7e56
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-<<<<<<< HEAD
             android:layout_marginBottom="12dp"
             android:layout_marginRight="19dp"
             android:gravity="center_vertical"
             android:text="31"
-            android:textColor="#ffffff"
-            android:textSize="14sp" />
-
-        <ImageView
-            android:id="@+id/impinglun"
-            android:layout_width="22dp"
-            android:layout_height="22dp"
-            android:layout_centerVertical="true"
-=======
->>>>>>> origin/feature/ysl
-            android:layout_marginRight="5dp"
-            android:layout_toLeftOf="@+id/pinglun_numb"
-            android:src="@drawable/comment" />
-
-        <TextView
-            android:id="@+id/lvnumb"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerVertical="true"
-<<<<<<< HEAD
-=======
-            android:layout_marginRight="19dp"
->>>>>>> c7a7a8c03148cf0b0423dc02de651c730ceb7e56
-=======
-            android:layout_marginRight="19dp"
->>>>>>> origin/feature/ysl
-            android:layout_toLeftOf="@+id/impinglun"
-            android:text="20"
             android:textColor="#ffffff"
             android:textSize="14sp" />
 
