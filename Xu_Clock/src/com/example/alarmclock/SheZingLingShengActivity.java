@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.RadioButton;
 import android.widget.RadioGroup;
@@ -24,30 +25,27 @@ public class SheZingLingShengActivity extends Activity {
 	ImageButton returnbtn;// 返回
 	RelativeLayout setbtn;// 设置模式
 	TextView textview2;
+	String musicname;
 	String[] str = { "震动", "铃声", "震动加铃声" };
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.shedinglingsheng);
 		textview = (TextView) findViewById(R.id.textview_moshi);
 		setbtn = (RelativeLayout) findViewById(R.id.shezhi_id);
 		radiogroup = (RadioGroup) findViewById(R.id.radiogroup);
 		returnbtn = (ImageButton) findViewById(R.id.return_btn);
 		fireflybtn = (RadioButton) findViewById(R.id.radiobtn_Firefly);
+		bobbtn = (RadioButton) findViewById(R.id.radiobtn_Bob);
 		babybtn = (RadioButton) findViewById(R.id.radiobtn_Baby);
 		bodesabtn = (RadioButton) findViewById(R.id.radiobtn_BoDeSa);
 		lanternbtn = (RadioButton) findViewById(R.id.radiobtn_Lantern);
 		lemonbtn = (RadioButton) findViewById(R.id.radiobtn_Lemon);
 		mushroomsbtn = (RadioButton) findViewById(R.id.radiobtn_Mushrooms);
 
-		fireflybtn.setOnClickListener(onClickListener);
-		babybtn.setOnClickListener(onClickListener);
-		bodesabtn.setOnClickListener(onClickListener);
-		lanternbtn.setOnClickListener(onClickListener);
-		lemonbtn.setOnClickListener(onClickListener);
-		mushroomsbtn.setOnClickListener(onClickListener);
 		returnbtn.setOnClickListener(onClickListener);
 		setbtn.setOnClickListener(onClickListener);
 		radiogroup.setOnCheckedChangeListener(new OnCheckedChangeListener() {// radioGroup的监听事件
@@ -57,22 +55,25 @@ public class SheZingLingShengActivity extends Activity {
 						// TODO Auto-generated method stub
 						switch (checkedId) {
 						case R.id.radiobtn_Firefly:
-							radiogroup.check(fireflybtn.getId());
+							musicname = "Firefly";
 							break;
 						case R.id.radiobtn_Baby:
-							radiogroup.check(babybtn.getId());
+							musicname = "Baby Wake Up";
+							break;
+						case R.id.radiobtn_Bob:
+							musicname = "Bob Start Attack";
 							break;
 						case R.id.radiobtn_BoDeSa:
-							radiogroup.check(bodesabtn.getId());
+							musicname = "BoDoSa";
 							break;
 						case R.id.radiobtn_Lantern:
-							radiogroup.check(lanternbtn.getId());
+							musicname = "Lantern Start";
 							break;
 						case R.id.radiobtn_Lemon:
-							radiogroup.check(lemonbtn.getId());
+							musicname = "Lemon Port";
 							break;
 						case R.id.radiobtn_Mushrooms:
-							radiogroup.check(mushroomsbtn.getId());
+							musicname = "Moshrooms Villain";
 							break;
 						default:
 							break;
@@ -80,6 +81,7 @@ public class SheZingLingShengActivity extends Activity {
 					}
 				});
 	}
+
 
 	OnClickListener onClickListener = new OnClickListener() {
 
@@ -91,9 +93,11 @@ public class SheZingLingShengActivity extends Activity {
 
 				Intent intent = new Intent(SheZingLingShengActivity.this,
 						BianJiNaoZhongActivity.class);
-				Bundle bundle = new Bundle();
-				intent.putExtra("String", "Firefly");
 
+				int id = radiogroup.getCheckedRadioButtonId();
+				RadioButton rb = (RadioButton) findViewById(id);
+				musicname = rb.getText().toString();
+				intent.putExtra("musicname", musicname);
 				startActivity(intent);
 				break;
 			case R.id.shezhi_id:// 选择闹钟提醒模式
@@ -118,11 +122,17 @@ public class SheZingLingShengActivity extends Activity {
 							}
 						}).show();
 				break;
-
 			default:
 				break;
 			}
 		}
 	};
 
+	public RadioButton getFireflybtn() {
+		return fireflybtn;
+	}
+
+	public void setFireflybtn(RadioButton fireflybtn) {
+		this.fireflybtn = fireflybtn;
+	}
 }

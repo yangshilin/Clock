@@ -5,7 +5,7 @@
     android:versionName="1.0" >
 
     <uses-sdk
-        android:minSdkVersion="8"
+        android:minSdkVersion="11"
         android:targetSdkVersion="21" />
 
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
@@ -38,7 +38,7 @@
             android:launchMode="singleTask"/>
        <activity
             android:name="com.example.alarmclock.BianJiNaoZhongActivity"
-            android:launchMode="singleTask"/>
+            android:launchMode="standard"/> 
         <activity
             android:name="com.example.alarmclock.DaoHangActivity"
             android:launchMode="singleTask"/>

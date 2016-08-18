@@ -77,7 +77,7 @@ public class TaskActivity extends Activity{
 		lists = new ArrayList<TaskSetget>();
 		TaskSetget ts = new TaskSetget();
 		
-		ts.setBeijing(R.drawable.pingjingdeyuzhou);
+		ts.setBeijing(R.drawable.pinjingdeyuzhou);
 		ts.setBofang(R.drawable.play_not);
 		ts.setTitle("ƽ��������");
 		ts.setNandu("�Ѷ�");
