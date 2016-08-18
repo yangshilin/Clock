@@ -19,12 +19,12 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
 
     <application
-        android:name="com.xuguoli.applition.XApplition"
+        android:name="com.example.xuguoliapplition.XApplition"
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name" >
         <activity
-            android:name="com.xuguoli.activity.Logon"
+            android:name="com.example.xuguoliactivity.Logon"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -34,7 +34,7 @@
             
         </activity>
         <activity
-            android:name="com.xuguoli.activity.Login"
+            android:name="com.example.xuguoliactivity.Login"
             android:launchMode="singleTask"/>
        <activity
             android:name="com.example.alarmclock.BianJiNaoZhongActivity"
@@ -58,19 +58,19 @@
             android:name="com.example.clock.MainActivity2"
             android:launchMode="singleTask"/>
         <activity
-            android:name="com.xuguoli.activity.Add"
+            android:name="com.example.xuguoliactivity.Add"
             android:launchMode="singleTask"/>
         <activity
-            android:name="com.xuguoli.activity.Set"
+            android:name="com.example.xuguoliactivity.Set"
             android:launchMode="singleTask"/>
         <activity
-            android:name="com.xuguoli.activity.ForgotPassword_activity"
+            android:name="com.example.xuguoliactivity.ForgotPassword_activity"
             android:launchMode="singleTask"/>
          <activity
-            android:name="com.xuguoli.activity.Set_new_passActivity"
+            android:name="com.example.xuguoliactivity.Set_new_passActivity"
             android:launchMode="singleTask"/>
          <activity
-             android:name="com.xuguoli.activity.Third_party"/>
+             android:name="com.example.xuguoliactivity.Third_party"/>
        
         <activity
             android:name="com.mob.tools.MobUIShell"

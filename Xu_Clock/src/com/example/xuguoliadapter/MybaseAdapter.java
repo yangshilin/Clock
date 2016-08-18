@@ -1,4 +1,4 @@
-package com.xuguoli.adapter;
+package com.example.xuguoliadapter;
 
 import java.util.List;
 
@@ -11,7 +11,7 @@ import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.xuguoli.javaclass.Cricle;
+import com.example.xuguolijavaclass.Cricle;
 
 public class MybaseAdapter extends BaseAdapter {
 	Context context;

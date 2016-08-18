@@ -1,4 +1,4 @@
-package com.xuguoli.activity;
+package com.example.xuguoliactivity;
 
 import android.app.Activity;
 import android.content.Intent;

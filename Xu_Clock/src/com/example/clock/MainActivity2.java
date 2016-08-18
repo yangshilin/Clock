@@ -4,11 +4,11 @@ import com.example.alarmclock.LuZhiLingShengActivity;
 import com.example.alarmclok.view.FindFragment;
 import com.example.clock.ClockRing.ClockListener;
 import com.example.clock.menu.view.MyHorizontalScrollView;
-import com.xuguoli.activity.Circle;
-import com.xuguoli.activity.Set;
+import com.example.fragment.Clock_Fragment;
+import com.example.fragment.Message_Fragment;
+import com.example.xuguoliactivity.Circle;
+import com.example.xuguoliactivity.Set;
 
-import fragment.Clock_Fragment;
-import fragment.Message_Fragment;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;

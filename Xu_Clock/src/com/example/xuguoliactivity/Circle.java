@@ -1,4 +1,4 @@
-package com.xuguoli.activity;
+package com.example.xuguoliactivity;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,8 +15,8 @@ import android.widget.TextView;
 
 import com.example.clock.R;
 import com.example.clock.menu.view.MyHorizontalScrollView;
-import com.xuguoli.adapter.MybaseAdapter;
-import com.xuguoli.javaclass.Cricle;
+import com.example.xuguoliadapter.MybaseAdapter;
+import com.example.xuguolijavaclass.Cricle;
 
 public class Circle extends Fragment {
 	ImageView imagesearch;//头视图控件

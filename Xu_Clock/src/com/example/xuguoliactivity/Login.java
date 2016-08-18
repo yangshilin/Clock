@@ -1,4 +1,4 @@
-package com.xuguoli.activity;
+package com.example.xuguoliactivity;
 
 import org.json.JSONException;
 import org.json.JSONObject;
