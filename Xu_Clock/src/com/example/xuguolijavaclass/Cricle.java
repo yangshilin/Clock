@@ -1,4 +1,4 @@
-package com.xuguoli.javaclass;
+package com.example.xuguolijavaclass;
 
 public class Cricle {
 	int iamgeId;
