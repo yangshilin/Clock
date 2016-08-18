@@ -297,6 +297,38 @@ public class ClockRing extends View {
 	}
 
 	public String getTemp() {
+		return temp;
+	}
+
+	public void setTemp(String temp) {
+		this.temp = temp;
+	}
+
+	public int getBitm() {
+		return bitm;
+	}
+
+	public void setBitm(int bitm) {
+		this.bitm = bitm;
+	}
+
+	public String getTime() {
+		return time;
+	}
+
+	public void setTime(String time) {
+		this.time = time;
+	}
+
+	public String getDate() {
+		return date;
+	}
+
+	public void setDate(String date) {
+		this.date = date;
+	}
+
+	public String getWeek() {
 		return week;
 	}
 
