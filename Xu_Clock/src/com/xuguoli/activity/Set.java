@@ -4,12 +4,14 @@ import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.view.Window;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 
 import com.example.clock.R;
+import com.example.xuguoliactivity.Add;
+import com.example.xuguoliactivity.Login;
 
 public class Set extends Activity implements OnClickListener{
 	private ImageView returnbe;

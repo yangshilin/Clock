@@ -48,20 +48,11 @@ public class TaskActivity extends Activity{
 		 * listview添加数据
 		 */
 		listview = (ListView)findViewById(R.id.task_listview);
-<<<<<<< HEAD
 		getData();//获得Data数据【方法】
 									//此上下文只能用Activity类型，不能用Fragment. 布局则是需要添加进listview的布局
 		adapter =new MyAdapterTask(TaskActivity.this,R.layout.activity_task_parameter, id, lists);
-		listview.setAdapter(adapter);//列表视图设置适配器
-=======
-		getData();//���Data���ݡ�������
-									//��������ֻ����Activity���ͣ�������Fragment. ����������Ҫ��ӽ�listview�Ĳ���
+		listview.setAdapter(adapter);//列表视图设置适配
 
-		
-		adapter =new MyAdapterTask(TaskActivity.this,R.layout.activity_task_2,id,lists);
-
-		listview.setAdapter(adapter);//�б���ͼ����������
->>>>>>> master
 		/**
 		 * 跳转页面
 		 * 需要在 AndroidManifest.xml 加标签
@@ -117,7 +108,7 @@ public class TaskActivity extends Activity{
 		lists = new ArrayList<TaskSetget>();
 		TaskSetget ts = new TaskSetget();
 		
-		ts.setBeijing(R.drawable.pinjingdeyuzhou);
+		ts.setBeijing(R.drawable.pingjingdeyuzhou);
 		ts.setBofang(R.drawable.play_not);
 		ts.setTitle("平静的宇宙");
 		ts.setNandu("难度：");
