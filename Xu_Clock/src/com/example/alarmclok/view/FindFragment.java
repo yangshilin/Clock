@@ -10,6 +10,7 @@ import android.support.v4.app.FragmentManager;
 import android.util.Log;
 import android.view.GestureDetector;
 import android.view.GestureDetector.OnGestureListener;
+import android.view.View.OnClickListener;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
 import android.view.View;
@@ -28,6 +29,7 @@ import android.widget.ViewFlipper;
 import com.example.adapter.MyAdapterFindNaozhong;
 import com.example.adapter.MyAdapterFindLuyin;
 import com.example.clock.R;
+import com.example.clock.menu.view.MyHorizontalScrollView;
 
 
 
@@ -49,6 +51,8 @@ public class FindFragment extends Fragment {
 	/**
 	 * 添加数据
 	 */
+	 ImageButton personage;
+	 MyHorizontalScrollView mMyHorizontalScrollView;
 	RadioGroup radiogroup;
 	ListView listNaozhong;
 	ListView listLuyin;
@@ -74,6 +78,9 @@ public class FindFragment extends Fragment {
 		/**
 		 * 数据添加listview数据
 		 */
+		personage=(ImageButton) view.findViewById(R.id.find_gerenzhongxin);
+		personage.setOnClickListener(clickListener);
+		mMyHorizontalScrollView=(MyHorizontalScrollView) getActivity().findViewById(R.id.mMyHorizontalScrollView);
 		listNaozhong = (ListView)view.findViewById(R.id.find_listview_1);
 		listNaozhong.addHeaderView(header);//listview添加头视图
 		listLuyin = (ListView)view.findViewById(R.id.find_listview_2);
@@ -96,6 +103,21 @@ public class FindFragment extends Fragment {
 		
 		return view;
 	}
+	OnClickListener clickListener=new OnClickListener() {
+		
+		@Override
+		public void onClick(View v) {
+			// TODO Auto-generated method stub
+			switch (v.getId()) {
+			case R.id.find_gerenzhongxin:
+				mMyHorizontalScrollView.openSroll();
+				break;
+
+			default:
+				break;
+			}
+		}
+	};
 	/**
 	 * 数据添加listview数据
 	 */
