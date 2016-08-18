@@ -1,12 +1,19 @@
 package com.example.alarmclok.view;
 
 public class FindSetgetLuyin {
+	int bofang;
 	String title;
 	String time;
 	String userQuantity;
 	String praiseQuantity;
 	String commentQuantity;
 	
+	public int getBofang() {
+		return bofang;
+	}
+	public void setBofang(int bofang) {
+		this.bofang = bofang;
+	}
 	public String getTitle() {
 		return title;
 	}
