@@ -1,4 +1,4 @@
-package com.xuguoli.applition;
+package com.example.xuguoliapplition;
 
 import cn.smssdk.SMSSDK;
 import android.app.Application;

@@ -16,7 +16,7 @@
 		    android:layout_height="fill_parent"
 		    android:scaleType="centerCrop"
 		    android:background="@drawable/pingjingdeyuzhou"
-		    android:alpha="0.8"/>
+		    android:alpha="0.6"/>
 		 
 		 <!-- android:scaleType="centerCrop"  居中放大 -->
 		   <!--  android:background="@drawable/pingjingdeyuzhou" --> 
