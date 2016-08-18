@@ -58,20 +58,16 @@
             android:name="com.example.clock.MainActivity2"
             android:launchMode="singleTask"/>
         <activity
-            android:name="com.xuguoli.activity.Add"
+            android:name="com.example.xuguoliactivity.Add"
             android:launchMode="singleTask"/>
         <activity
-            android:name="com.xuguoli.activity.Set"
+            android:name="com.example.xuguoliactivity.Set"
             android:launchMode="singleTask"/>
         <activity
-            android:name="com.xuguoli.activity.ForgotPassword_activity"
+            android:name="com.example.xuguoliactivity.ForgotPassword_activity"
             android:launchMode="singleTask"/>
          <activity
-            android:name="com.xuguoli.activity.Set_new_passActivity"
-            android:launchMode="singleTask"/>
-         <activity
-             android:name="com.xuguoli.activity.Third_party"/>
-       
+             android:name="com.example.xuguoliactivity.Third_party"/>
         <activity
             android:name="com.mob.tools.MobUIShell"
             android:configChanges="keyboardHidden|orientation|screenSize"
