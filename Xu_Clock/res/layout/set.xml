@@ -42,8 +42,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:padding="10dp"
             android:background="@null"
+            android:padding="10dp"
             android:src="@drawable/dexter" />
 
         <ImageView
@@ -62,11 +62,10 @@
             android:layout_centerVertical="true"
             android:layout_marginLeft="14dp"
             android:layout_toRightOf="@+id/imagemine_two"
-            android:text="夏是夏天的夏_"
             android:gravity="center_vertical"
+            android:text="夏是夏天的夏_"
             android:textColor="#000000"
             android:textSize="14sp" />
-
     </RelativeLayout>
 
     <View
@@ -94,8 +93,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:padding="10dp"
             android:background="@null"
+            android:padding="10dp"
             android:src="@drawable/dexter" />
     </RelativeLayout>
 
@@ -124,8 +123,8 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:padding="10dp"
             android:background="@null"
+            android:padding="10dp"
             android:src="@drawable/dexter" />
     </RelativeLayout>
 
@@ -163,12 +162,11 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:padding="10dp"
-            android:text=""
-            android:checked="false"
             android:button="@null"
+            android:checked="false"
             android:drawableLeft="@drawable/set_setector"
-            />
+            android:padding="10dp"
+            android:text="" />
     </RelativeLayout>
 
     <View
@@ -198,12 +196,11 @@
             android:layout_height="wrap_content"
             android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
-            android:padding="10dp"
-            android:text=""
-            android:checked="false"
             android:button="@null"
-            android:drawableLeft="@drawable/set_setector" />
-
+            android:checked="false"
+            android:drawableLeft="@drawable/set_setector"
+            android:padding="10dp"
+            android:text="" />
     </RelativeLayout>
 
     <View
@@ -268,6 +265,5 @@
         android:text="关于"
         android:textColor="#414141"
         android:textSize="17sp" />
-
 
 </LinearLayout>
