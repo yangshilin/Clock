@@ -1,0 +1,9 @@
+diff a/Xu_Clock/src/com/example/adapter/FindMybaseAdapter.java b/Xu_Clock/src/com/example/adapter/FindMybaseAdapter.java	(rejected hunks)
+@@ -48,6 +48,7 @@
+ 	List<Parameter> list;// 列表集合parameter封装类
+ 
+ 	public FindMybaseAdapter() {// 无参构造器
++<<<<<<< HEAD
+ >>>>>>> origin/feature/ysl
+ =======
+ >>>>>>> origin/feature/LLIN
