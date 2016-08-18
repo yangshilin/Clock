@@ -1,5 +1,8 @@
 package com.example.clock;
 
+import java.util.HashMap;
+import java.util.Map;
+
 import com.example.alarmclock.BianJiNaoZhongActivity;
 
 import android.annotation.SuppressLint;
@@ -25,22 +28,22 @@ import android.view.MotionEvent;
 import android.view.View;
 
 public class ClockRing extends View {
-	private String time = "12:00";
-	private String date = "06/25";
-	private String week = "周六";
-	private String wendu = "30";
-	private String temp = wendu + "℃";
-	int bitm = R.drawable.weather;
-	int difficult = 1;
-	String diffi = "难度：";
-	String doing = "稍息立正起床！";
-	String alarm_time = "07:30";
-	boolean open;
+	private static String time = "12:00";
+	private static String date = "06/25";
+	private static String week = "周六";
+	private static String wendu = "30";
+	private static String temp = wendu + "℃";
+	static int bitm = R.drawable.weather;
+	static int difficult = 1;
+	static String diffi = "难度：";
+	static String doing = "稍息立正起床！";
+	static String alarm_time = "07:30";
+	 static boolean open;
 	boolean isRunning;
+	Map<Integer, String> weekMap=new HashMap<Integer, String>();
 
 	public ClockListener getClockListener() {
 		return clockListener;
-
 	}
 
 	public void setClockListener(ClockListener clockListener) {
@@ -85,7 +88,6 @@ public class ClockRing extends View {
 				if (clockListener != null) {
 					clockListener.click();
 				}
-
 			}
 			break;
 
@@ -188,7 +190,7 @@ public class ClockRing extends View {
 			public void run() {
 				// TODO Auto-generated method stub
 				Time times = new Time("GMT-8");
-				
+
 				/*
 				 * 对于已经设定为GMT时间标准的dateFormat来说，一切需要他转换的字符串日期都是GMT标准时间，转换后返回的Date由于默认
 				 * 遵守系统默认时区，所以转换给Date的日期需要+8（例如北京标准时区），也就是时区与标准不同导致的时差。
@@ -198,32 +200,26 @@ public class ClockRing extends View {
 					while (true) {
 						times.setToNow();
 						int year = times.year;
-						int month = times.month+1;
+						int month = times.month + 1;
 						int day = times.monthDay;
 						int minute = times.minute;
-						int hour = times.hour+8;
-						int week=times.weekDay;
+						int hour = times.hour + 8;
+						int week = times.weekDay;
 						int sec = times.second;
-						if (sec%10==0) {
-							Log.i("time", "当前时间为：" + year + "年 " + month + "月 "
-									+ day + "日 " + hour + "时 " + minute + "分 "
-									+ sec + "秒" + "time" + "week"+week);
-							date = String.valueOf(month) + "/"
-									+ String.valueOf(day);
-							if(minute>9){
+						date = String.valueOf(month) + "/"
+								+ String.valueOf(day);
+						if (minute > 9) {
 							time = String.valueOf(hour) + ":"
 									+ String.valueOf(minute);
-							}
-							else{
-								time=String.valueOf(hour) + ":"
-										+ "0"+String.valueOf(minute);
-							}
-							Message msg = new Message();
-							msg.what = 1001;
-							handler.sendMessage(msg);
-							Thread.sleep(1000);//
-							//
+						} else {
+							time = String.valueOf(hour) + ":" + "0"
+									+ String.valueOf(minute);
 						}
+						Message msg = new Message();
+						msg.what = 1001;
+						handler.sendMessage(msg);
+						Thread.sleep(1000);//
+						//
 					}
 				} catch (InterruptedException e) {
 					// TODO Auto-generated catch block
@@ -301,38 +297,6 @@ public class ClockRing extends View {
 	}
 
 	public String getTemp() {
-		return temp;
-	}
-
-	public void setTemp(String temp) {
-		this.temp = temp;
-	}
-
-	public int getBitm() {
-		return bitm;
-	}
-
-	public void setBitm(int bitm) {
-		this.bitm = bitm;
-	}
-
-	public String getTime() {
-		return time;
-	}
-
-	public void setTime(String time) {
-		this.time = time;
-	}
-
-	public String getDate() {
-		return date;
-	}
-
-	public void setDate(String date) {
-		this.date = date;
-	}
-
-	public String getWeek() {
 		return week;
 	}
 
