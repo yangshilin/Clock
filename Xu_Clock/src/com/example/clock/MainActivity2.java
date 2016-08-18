@@ -189,6 +189,15 @@ public class MainActivity2 extends FragmentActivity {
 		// TODO Auto-generated method stub
 		FragmentManager fm = getSupportFragmentManager();
 		FragmentTransaction ft = fm.beginTransaction();
+<<<<<<< HEAD
+=======
+		Clock_Fragment clock_Fragment = new Clock_Fragment();
+		Message_Fragment message_Fragment = new Message_Fragment();
+		Circle circle=new Circle();
+
+		FindFragment FindFragment=new FindFragment();
+
+>>>>>>> master
 		switch (R_id) {
 		case R.id.clock:
 			ft.replace(R.id.linearlayout, clock_Fragment);

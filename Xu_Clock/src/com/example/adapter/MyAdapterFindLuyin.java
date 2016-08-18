@@ -6,6 +6,7 @@ import java.util.List;
 import com.example.alarmclok.view.FindSetgetLuyin;
 import com.example.clock.R;
 
+>>>>>>> 76a9568c72b1ce61c7c0ae0b676edcec1992f61b
 
 import android.content.Context;
 import android.view.LayoutInflater;
