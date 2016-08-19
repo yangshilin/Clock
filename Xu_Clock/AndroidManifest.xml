@@ -73,7 +73,7 @@
             android:name="com.example.xuguoliactivity.PlayerVideoView"
             android:launchMode="singleTask"/>
          <activity
-             android:name="com.xuguoli.activity.Third_party"/>
+             android:name="com.example.xuguoliactivity.Third_party"/>
        
         <activity
             android:name="com.mob.tools.MobUIShell"
