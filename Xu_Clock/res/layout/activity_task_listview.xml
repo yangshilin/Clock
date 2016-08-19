@@ -38,7 +38,7 @@
 <!-- android:background="#60[前面2位是透明值]000000[后面6位是颜色]" -->
 
         <ListView
-            android:id="@+id/task.listview"
+            android:id="@+id/task_listview"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"

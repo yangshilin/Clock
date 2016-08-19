@@ -63,7 +63,7 @@ public class TaskActivity extends Activity{
 		/**
 		 * 任务选择按钮
 		 */
-		//taskButton = (ImageButton)findViewById(R.id.task_xianche_shouchang);
+	//	taskButton = (ImageButton)findViewById(R.id.task_xianche_shouchang);
 		//taskButton.setOnClickListener(taskxuanze);
 	}
 	/**
@@ -74,6 +74,15 @@ public class TaskActivity extends Activity{
 		@Override
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
+			switch (v getId()) {
+					
+			case R.id.task_shiping_buju:
+				
+				break;
+
+			default:
+				break;
+			}
 		//没写完
 		}
 		

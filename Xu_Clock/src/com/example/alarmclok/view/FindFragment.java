@@ -42,8 +42,6 @@ public class FindFragment extends Fragment {
 	 */
 	ViewFlipper lunbo;//广告动画
 	GestureDetector huadong;//视图点击滑动【手势检测器】
-	//LayoutInflater innflater;
-	//LinearLayout linearlayout;
 	/**
 	 * 头视图
 	 */
