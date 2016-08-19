@@ -12,7 +12,6 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.ListView;
 import android.widget.TextView;
-
 import com.example.clock.R;
 import com.example.clock.menu.view.MyHorizontalScrollView;
 import com.example.xuguoliadapter.MybaseAdapter;
@@ -245,4 +244,5 @@ OnClickListener clickListener=new OnClickListener() {
 
 	
 	}
+
 }
