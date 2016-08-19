@@ -1,27 +1,33 @@
 package com.example.alarmclock;
 
-import com.example.clock.MainActivity2;
-import com.example.clock.R;
-
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.view.Window;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
+import android.widget.LinearLayout.LayoutParams;
 import android.widget.Toast;
+
+import com.example.clock.MainActivity2;
+import com.example.clock.R;
 
 public class LuZhiLingShengActivity extends Activity{
 	ImageButton returnbtn;
 	ImageView recordingbtn;
+	LinearLayout linearLayout;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.luzhilingsheng);
 		returnbtn=(ImageButton)findViewById(R.id.return_imagebtn);
 		recordingbtn=(ImageView)findViewById(R.id.recording_imagebtn);
+		linearLayout=(LinearLayout)findViewById(R.id.linearlayout_id);
 		returnbtn.setOnClickListener(onClickListener);
 		recordingbtn.setOnClickListener(onClickListener);
 	}
@@ -38,7 +44,7 @@ public class LuZhiLingShengActivity extends Activity{
 				break;
 			case R.id.recording_imagebtn:
 				Toast.makeText(getApplicationContext(), "你可以录制你的声音了", Toast.LENGTH_LONG).show();// ��ʾʱ��϶�
-				//Toast.makeText(this, "你可以录制你的声音了", Toast.LENGTH_SHORT).show();
+				
 				break;
 			default:
 				break;

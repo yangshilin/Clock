@@ -123,6 +123,7 @@ public class FindFragment extends Fragment {
 		// TODO Auto-generated method stub
 		lists1=new ArrayList<FindSetgetNaozhong>();
 		FindSetgetNaozhong  fs1 = new FindSetgetNaozhong();
+		fs1.setBofang(R.drawable.play);
 		fs1.setTitle("演员");
 		fs1.setTime("7/3");
 		fs1.setUserQuantity("232");

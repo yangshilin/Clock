@@ -4,12 +4,19 @@ public class FindSetgetNaozhong {
 	/**
 	 *定义类型
 	 */
+	int bofang;
+	
 	String title;
 	String time;
 	String userQuantity;
 	String praiseQuantity;
 	String commentQuantity;
-	
+	public int getBofang() {
+		return bofang;
+	}
+	public void setBofang(int bofang) {
+		this.bofang = bofang;
+	}
 	public String getTitle() {
 		return title;
 	}

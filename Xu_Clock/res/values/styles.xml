@@ -8,11 +8,12 @@
         <item name="android:drawablePadding">5dp</item>
         <item name="android:gravity">center</item>
     </style>
-
- <style name="RatingBar"
+    
+	<style name="RatingBar"
         parent="@android:style/Widget.RatingBar">
        <item name="android:progressDrawable">@drawable/jingdutiao</item>
         <item name="android:minHeight">16dp</item>
         <item name="android:maxHeight">16dp</item>
     </style>
+
 </resources>

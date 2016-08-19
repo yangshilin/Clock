@@ -7,9 +7,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
+import android.widget.ImageView;
 import android.widget.TextView;
-
-
 
 import com.example.alarmclok.view.FindSetgetNaozhong;
 import com.example.clock.R;
@@ -56,6 +55,7 @@ public class MyAdapterFindNaozhong extends BaseAdapter{
 		if(convertView == null){
 			convertView = inflater.inflate(resourceid,null);
 		}
+		ImageView bofang =(ImageView)convertView.findViewById(R.id.find_bofang_button);
 		TextView title = (TextView) convertView.findViewById(R.id.find_music_title);
 		TextView time = (TextView) convertView.findViewById(R.id.find_music_riqi);
 		TextView userQuantity = (TextView) convertView.findViewById(R.id.find_renshu_shuzhi);
@@ -67,6 +67,7 @@ public class MyAdapterFindNaozhong extends BaseAdapter{
 		
 		/*	imageView.setBackgroundDrawable(context.getResources().getDrawable(
 					products.getImgedt())); 背景写法*/
+		bofang.setImageResource(fs1.getBofang());
 		title.setText(fs1.getTitle());
 		time.setText(fs1.getTime());
 		userQuantity.setText(fs1.getUserQuantity());

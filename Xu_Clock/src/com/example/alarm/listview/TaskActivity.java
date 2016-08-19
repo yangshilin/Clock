@@ -51,7 +51,8 @@ public class TaskActivity extends Activity{
 		getData();//获得Data数据【方法】
 									//此上下文只能用Activity类型，不能用Fragment. 布局则是需要添加进listview的布局
 		adapter =new MyAdapterTask(TaskActivity.this,R.layout.activity_task_parameter, id, lists);
-		listview.setAdapter(adapter);//列表视图设置适配器
+		listview.setAdapter(adapter);//列表视图设置适配
+
 		/**
 		 * 跳转页面
 		 * 需要在 AndroidManifest.xml 加标签
