@@ -3,6 +3,7 @@ package com.example.xuguoliadapter;
 import java.util.List;
 
 import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -10,7 +11,9 @@ import android.widget.BaseAdapter;
 import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
+import com.example.xuguoliactivity.PlayerVideoView;
 import com.example.xuguolijavaclass.Cricle;
 
 public class MybaseAdapter extends BaseAdapter {
@@ -73,6 +76,7 @@ public class MybaseAdapter extends BaseAdapter {
 		Cricle cricle = list.get(position);
 
 		tongxiang.setImageResource(cricle.getIamgeId());
+		
 		usename.setText(cricle.getUsename());
 		fromphone.setText(cricle.getFromphone());
 		button.setImageResource(cricle.getButton());
