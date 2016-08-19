@@ -44,6 +44,7 @@
             android:layout_width="22dp"
             android:layout_height="22dp"
             android:layout_alignParentRight="true"
+            android:background="@null"
             android:layout_centerVertical="true"
             android:layout_marginRight="19dp"
             android:src="@drawable/pull_down" />
@@ -107,12 +108,12 @@
             android:id="@+id/lvnumb"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignParentRight="true"
             android:layout_centerVertical="true"
+             android:layout_toLeftOf="@+id/impinglun"
             android:layout_marginBottom="12dp"
             android:layout_marginRight="19dp"
             android:gravity="center_vertical"
-            android:text="31"
+            android:text="20"
             android:textColor="#ffffff"
             android:textSize="14sp" />
 
