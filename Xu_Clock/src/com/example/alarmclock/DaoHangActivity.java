@@ -6,6 +6,7 @@ import android.app.Activity;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
 import android.view.View.OnClickListener;
 import android.widget.ImageButton;
 import android.widget.ImageView;
@@ -18,6 +19,7 @@ public class DaoHangActivity extends Activity{
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.daohang);
+		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		addBtn=(ImageButton)findViewById(R.id.add_imagebutton);
 		personalBtn=(ImageView)findViewById(R.id.personal_imageview);
 		
