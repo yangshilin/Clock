@@ -14,7 +14,10 @@
     <string name="chongfu">重复:</string>
     <string name="lingsheng">铃声:</string>
     <string name="biaoqian">标签:</string>
-    <string name="shijian1">07:30  AM</string>
+    <string name="shijian1">07</string>
+    <string name="shijian2">:</string>
+    <string name="shijian3">30</string>
+    <string name="shijian4">AM</string>
     <string name="gongzuori">星期一</string>
     
     <string name="Firefly">Firefly</string>
