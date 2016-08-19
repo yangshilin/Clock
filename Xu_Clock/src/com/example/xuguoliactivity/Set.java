@@ -25,10 +25,9 @@ import com.example.clock.R;
 
 public class Set extends Activity implements OnClickListener {
 	private ImageView returnbe;
-	CheckBox imageButton5,imageButton4;
+	CheckBox imageButton5, imageButton4;
 	private TextView setname;
 	private ImageButton imageButton1, imageButton2, imageButton3, imageButton6;
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
@@ -36,6 +35,9 @@ public class Set extends Activity implements OnClickListener {
 		requestWindowFeature(Window.FEATURE_NO_TITLE);
 		setContentView(R.layout.set);
 		intView();
+		if (getIntent().getExtras() != null) {
+			setname.setText(getIntent().getExtras().getString("name"));
+		}
 	}
 
 	public void intView() {
@@ -61,7 +63,10 @@ public class Set extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		switch (v.getId()) {
 		case R.id.returnbe:
-			startActivity(new Intent(Set.this, MainActivity2.class));
+			Intent intent =new Intent();
+			intent.putExtra("name", setname.getText().toString());
+			setResult(200, intent);
+			finish();
 			break;
 		case R.id.imageButton1:
 			startActivity(new Intent(Set.this, Add.class));
@@ -73,21 +78,21 @@ public class Set extends Activity implements OnClickListener {
 			startActivity(new Intent(Set.this, BianJiNaoZhongActivity.class));
 			break;
 		case R.id.imageButton4:
-			if(imageButton4.isChecked()){
-				//添加点中的状态
-			}else{
-				//添加点中的状态
+			if (imageButton4.isChecked()) {
+				// 添加点中的状态
+			} else {
+				// 添加点中的状态
 			}
-			
-			//startActivity(new Intent(Set.this, Add.class));
+
+			// startActivity(new Intent(Set.this, Add.class));
 			break;
 		case R.id.imageButton5:
-			if(imageButton5.isChecked()){
-				//添加点中的状态
-			}else{
-				//添加点中的状态
+			if (imageButton5.isChecked()) {
+				// 添加点中的状态
+			} else {
+				// 添加点中的状态
 			}
-			//startActivity(new Intent(Set.this, Add.class));
+			// startActivity(new Intent(Set.this, Add.class));
 			break;
 		case R.id.imageButton6:
 			startActivity(new Intent(Set.this, Add.class));
@@ -101,7 +106,7 @@ public class Set extends Activity implements OnClickListener {
 
 	@SuppressLint("NewApi")
 	private void bjname() {
-		//String[] str = { "1", "2" };
+		// String[] str = { "1", "2" };
 		LayoutInflater inflater = getLayoutInflater();
 		final View v = inflater.inflate(R.layout.item_setname, null);
 		AlertDialog.Builder builder = new AlertDialog.Builder(Set.this,
@@ -111,24 +116,13 @@ public class Set extends Activity implements OnClickListener {
 		tv.setText("昵称");
 		EditText et = (EditText) v.findViewById(R.id.et);
 		et.setText(setname.getText());
-		//builder.setItems(str, new DialogInterface.OnClickListener() {
-		/*@Override 
-		 * 对话框的选择1或者是二
-			public void onClick(DialogInterface dialog, int which) {
-				// TODO Auto-generated method stub
-				switch (which) {
-				case 0:
-					setname.setText("1");
-					break;
-				case 1:
-					setname.setText("2");
-					break;
-				default:
-					break;
-				}
-				dialog.dismiss();
-			}
-		});*/
+		// builder.setItems(str, new DialogInterface.OnClickListener() {
+		/*
+		 * @Override 对话框的选择1或者是二 public void onClick(DialogInterface dialog, int
+		 * which) { // TODO Auto-generated method stub switch (which) { case 0:
+		 * setname.setText("1"); break; case 1: setname.setText("2"); break;
+		 * default: break; } dialog.dismiss(); } });
+		 */
 		builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
 
 			@Override
@@ -141,7 +135,7 @@ public class Set extends Activity implements OnClickListener {
 			}
 		});
 		builder.create().show();
-		
+
 	}
-	
+
 }

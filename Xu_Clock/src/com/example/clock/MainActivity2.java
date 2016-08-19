@@ -29,7 +29,7 @@ import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.TextView;
 
 public class MainActivity2 extends FragmentActivity {
-
+	public static final int REQUEST_CODE = 1002;
 	RadioGroup radioGroup;
 	RadioButton clock;
 	RadioButton found;
@@ -41,6 +41,7 @@ public class MainActivity2 extends FragmentActivity {
 	Circle circle = new Circle();
 	FindFragment FindFragment = new FindFragment();
 	TextView signature;
+	TextView name;
 	ImageView record;
 	TextView text_record;
 	ImageView personage;
@@ -57,6 +58,7 @@ public class MainActivity2 extends FragmentActivity {
 		found = (RadioButton) findViewById(R.id.found);
 		ring = (RadioButton) findViewById(R.id.ring);
 		record = (ImageView) findViewById(R.id.record);
+		name = (TextView) findViewById(R.id.name);
 		text_record = (TextView) findViewById(R.id.text_record);
 		mMyHorizontalScrollView = (MyHorizontalScrollView) findViewById(R.id.mMyHorizontalScrollView);
 		head_portrait = (ImageView) findViewById(R.id.head_portrait);
@@ -79,7 +81,8 @@ public class MainActivity2 extends FragmentActivity {
 				break;
 			case R.id.head_portrait:
 				Intent intent = new Intent(MainActivity2.this, Set.class);
-				startActivity(intent);
+				intent.putExtra("name", name.getText().toString());
+				startActivityForResult(intent, REQUEST_CODE);
 				break;
 			case R.id.record:
 				Intent intent1 = new Intent(MainActivity2.this,
@@ -97,6 +100,15 @@ public class MainActivity2 extends FragmentActivity {
 			default:
 				break;
 			}
+		}
+	};
+
+	@Override
+	protected void onActivityResult(int arg0, int arg1, Intent arg2) {
+		if (arg0 == 1002 && arg2 != null && arg2.getExtras() != null) {
+			String username = arg2.getExtras().getString("name");
+			name.setText(username);
+			super.onActivityResult(arg0, arg1, arg2);
 		}
 	};
 

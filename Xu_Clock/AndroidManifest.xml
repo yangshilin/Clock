@@ -31,43 +31,25 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
-            
         </activity>
+        <activity android:name="com.example.xuguoliactivity.Login" />
         <activity
-            android:name="com.example.xuguoliactivity.Login"
-            android:launchMode="singleTask"/>
-       <activity
             android:name="com.example.alarmclock.BianJiNaoZhongActivity"
-            android:launchMode="standard"/> 
-        <activity
-            android:name="com.example.alarmclock.DaoHangActivity"
-            android:launchMode="singleTask"/>
-        <activity
-            android:name="com.example.alarm.listview.RepeatActivity"
-            android:launchMode="singleTask"/>
-        <activity
-            android:name="com.example.alarm.listview.TaskActivity"
-            android:launchMode="singleTask"/>
+            android:launchMode="standard" />
+        <activity android:name="com.example.alarmclock.DaoHangActivity" />
+        <activity android:name="com.example.alarm.listview.RepeatActivity" />
+        <activity android:name="com.example.alarm.listview.TaskActivity" />
         <activity
             android:name="com.example.alarmclock.LuZhiLingShengActivity"
-            android:launchMode="singleTask"/>
-        <activity
-            android:name="com.example.alarmclock.SheZingLingShengActivity"
-            android:launchMode="singleTask"/>
+            android:launchMode="singleInstance" />
+        <activity android:name="com.example.alarmclock.SheZingLingShengActivity" />
         <activity
             android:name="com.example.clock.MainActivity2"
-            android:launchMode="singleTask"/>
-        <activity
-            android:name="com.example.xuguoliactivity.Add"
-            android:launchMode="singleTask"/>
-        <activity
-            android:name="com.example.xuguoliactivity.Set"
-            android:launchMode="singleTask"/>
-        <activity
-            android:name="com.example.xuguoliactivity.ForgotPassword_activity"
-            android:launchMode="singleTask"/>
-         <activity
-             android:name="com.example.xuguoliactivity.Third_party"/>
+            android:launchMode="singleTask" />
+        <activity android:name="com.example.xuguoliactivity.Add" />
+        <activity android:name="com.example.xuguoliactivity.Set" />
+        <activity android:name="com.example.xuguoliactivity.ForgotPassword_activity" />
+        <activity android:name="com.example.xuguoliactivity.Third_party" />
         <activity
             android:name="com.mob.tools.MobUIShell"
             android:configChanges="keyboardHidden|orientation|screenSize"
