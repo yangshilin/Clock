@@ -44,7 +44,7 @@ public class MainActivity2 extends FragmentActivity {
 	ImageView record;
 	TextView text_record;
 	ImageView personage;
-	MyHorizontalScrollView mMyHorizontalScrollView;
+	MyHorizontalScrollView mMyHorizontalScrollView;//侧滑菜单
 
 	protected void onCreate(Bundle arg0) {
 		super.onCreate(arg0);

@@ -98,7 +98,7 @@ public class TaskActivity extends Activity{
 		public void onClick(View v) {
 			// TODO Auto-generated method stub
 			switch (v.getId()) {
-			case R.id.task_fanhui_button://idz执行         //当前上下文//跳转指定的界面
+			case R.id.task_fanhui_button://id执行         //当前上下文//跳转指定的界面
 				Intent intent = new Intent(TaskActivity.this,BianJiNaoZhongActivity.class);
 				startActivity(intent);//start开始 执行Intent意图【跳转】
 				break;
