@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:alpha="0.9"
+    android:background="@color/gray_white"
+    android:gravity="bottom"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/paizhao_touxiang"
+        style="@style/textSize2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/paizhao"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/cong_touxiang"
+        style="@style/textSize2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/cong"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/baocun_touxiang"
+        style="@style/textSize2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="1dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/baocun"
+        android:textColor="@color/black" />
+
+    <TextView
+        android:id="@+id/quxiao_touxiang"
+        style="@style/textSize2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:background="@color/white"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="@string/quxiao"
+        android:textColor="@color/black" />
+
+</LinearLayout>

@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" 
+      android:background="@color/danhuise" >
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="500dp"
+        android:orientation="vertical">
+    
+    
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:background="@color/white" >
+
+        <ImageView
+            android:id="@+id/ziju_tuijian_zuji_picture"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:src="@drawable/about_us" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:layout_toRightOf="@id/ziju_tuijian_zuji_picture"
+            android:text="@string/zuji_tuijian"
+            android:textColor="@color/black"
+            android:textSize="14dp" />
+
+        <TextView
+            android:id="@+id/zuji_tuijian_zan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/ziju_tuijian_zuji_picture"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="80dp"
+            android:drawableLeft="@drawable/xin"
+            android:drawablePadding="5dp"
+            android:text="22.6万"
+            android:textColor="@color/qianhuise"
+            android:textSize="10dp" />
+
+        <TextView
+            android:id="@+id/zuji_tuijian_pinglun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/ziju_tuijian_zuji_picture"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:drawableLeft="@drawable/xiao_pinglun"
+            android:drawablePadding="5dp"
+            android:text="5.7万条"
+            android:textColor="@color/qianhuise"
+            android:textSize="10dp" />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="4"
+        android:background="@color/white"
+        android:orientation="horizontal" >
+
+        <ImageView
+            android:id="@+id/zuji_tuijian_picture_three"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="7dp"
+            android:layout_marginTop="15dp"
+            android:layout_weight="1"
+            android:scaleType="centerCrop"
+            android:src="@drawable/huanshanriluo" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:orientation="vertical" >
+
+            <ImageView
+                android:id="@+id/zuji_tuijian_picture_one"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="7dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/huangshanyikeshu" />
+            <!-- android:scaleType="centerCrop"  图片居中放大 -->
+
+            <ImageView
+                android:id="@+id/zuji_tuijian_picture_two"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginLeft="7dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="7dp"
+                android:layout_weight="1"
+                android:scaleType="centerCrop"
+                android:src="@drawable/huanshangyunhai" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="10dp"
+        android:layout_weight="3"
+        android:background="@color/white"
+        android:orientation="vertical" 
+         android:layout_marginBottom="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:id="@+id/zuji_tuijian_content_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/zuji_tuijian_content_title"
+                android:textColor="@color/black"
+                android:textSize="14sp" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/zuji_tuijian_content_miaoshu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:text="@string/zuji_tuijian_content_scenery_miaoshu"
+            android:textColor="@color/deepgray"
+            android:textSize="12sp" />
+    </LinearLayout>
+        
+	</LinearLayout>
+</LinearLayout>
